@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-    
-        <link rel='stylesheet' type='text/css' media='screen' href={{ '/assets/main.css'  | relative_url }}>
 
-    
-    </head>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href={{ '/assets/main.css'  | relative_url }}>
+
+
+</head>
+
 <body>
-{%include header.html%}
-{% include fin/info.html%}
-{% include fin/aikataulu.html%}
-{% include fin/palkinnot.html%}
-{% include fin/jatko-kilpailut.html%}
-{% include fin/harjoittelu.html%}
-{% include fin/jarjestajat.html%}
-{% include fin/aiemmat-vuodet.html%}
+
+    {%include header.html%}
+    <!-- <div class="content">
+        {% include fin/info.html%}
+        {% include fin/aikataulu.html%}
+        {% include fin/palkinnot.html%}
+        {% include fin/jatko-kilpailut.html%}
+        {% include fin/harjoittelu.html%}
+        {% include fin/jarjestajat.html%}
+        {% include fin/aiemmat-vuodet.html%}
+    </div>-->
+    {{content}}
 </body>
 
 </html>
