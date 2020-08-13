@@ -4,8 +4,9 @@ html {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     color: rgb(27, 27, 27);
+    background: white;
 }
-body{
+body {
     margin: 0;
 }
 
@@ -49,6 +50,8 @@ h2 {
 
 .entry h2 {
     margin-left: 5em;
+    margin-top: 0;
+    padding-top: 1em;
 }
 
 .boxes-three {
@@ -61,8 +64,9 @@ h2 {
     flex: 1;
 }
 
-.boxes-three div:nth-child(odd){
-    background: rgba(136, 0, 227, 0.514);
+.boxes-three div:nth-child(even){
+ //   background: #8800e3ff;
+ //   color: white;
 }
 
 .img-box {
@@ -83,6 +87,8 @@ h2 {
   border-radius: 100%;
 }
 
+
+
 .prizes {
     display: flex;
     flex-wrap: wrap;
@@ -91,24 +97,29 @@ h2 {
 
 .prizes h2 {
     margin-left: 5em;
+    margin-top: 0;
 }
 
 .prizes .left {
     flex: 1.7;
     background: white;
     padding: 1em;
+    
 }
 
 .prizes .left p {
     margin: auto;
     max-width: 40em;
+    
 }
 
 .prizes .right{
     flex: 1.3;
-    background: rgb(180, 180, 180);
+    background: #41444eff;
     padding: 1em;
+    color: white;
 }
+
 .prizes .right p {
     margin: auto;
     max-width: 20em;
@@ -125,7 +136,8 @@ h2 {
 }
 
 .container {
-    background: rgba(136, 0, 227, 0.514);
+    background: #8800e3ff;
+    color: white;
 }
 
 .jarjestajat {
@@ -151,7 +163,8 @@ h2 {
   }
 
   .container-2 {
-    background: rgb(180, 180, 180);
+    background: #41444eff;
+    color: white;
   }
 
   .yhteiso {

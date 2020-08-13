@@ -20,7 +20,7 @@
 
 title: Datatähti
 baseurl: "/datatahti" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.coms
+url: "https://millakortelainen.github.io/datatahti/" # the base hostname & protocol for your site, e.g. http://example.coms
 
 # Build settings
 plugins:
