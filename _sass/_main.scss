@@ -2,6 +2,8 @@
 
 html {
     font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: rgb(27, 27, 27);
 }
 body{
     margin: 0;
@@ -30,47 +32,6 @@ body{
     font-size: 2em;
 }
 
-.content {
-    display: grid;
-    grid: auto-flow;
-    grid-auto-rows: minmax(100px, auto);
-}
-
-.content-box {
-    padding: 2em 2em;
-    
-}
-
-.content .text {
-    max-width: 50em;
-    margin: auto;
-}
-
-#info {
-    background: darkgrey;
-}
-
-#schedule {
-    background: white;
-    margin: 0;
-}
-
-#prizes {
-    background: darkgrey;
-}
-
-#extra-competititons {
-    background: white;
-}
-
-#training{
-    background: darkgrey;
-}
-
-#organizers {
-    background: white;
-}
-
 .jarjestajat {
     width: 75em;
     display: grid;
@@ -78,60 +39,153 @@ body{
 
 }
 
-
-#earlier-years{
-    background: darkgrey;
+.entry {
+    background: white;
 }
 
-.osallistuminen{
-    display: grid;
-    grid: auto-flow / 1fr 1fr 1fr;
-
+h2 {
+    font-size: 3em;
 }
-.harjoittelu {
+
+.entry h2 {
+    margin-left: 5em;
+}
+
+.boxes-three {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.boxes-three > div {
+    flex: 1;
+}
+
+.boxes-three div:nth-child(odd){
+    background: rgba(136, 0, 227, 0.514);
+}
+
+.img-box {
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.harjoittelu img {
+.img-box h3 {
+    font-size: 2em;
+    margin: auto;
+}
+
+.img-box img {
   object-fit: cover;
   width: 90%;
   max-height: 90%;
   border-radius: 100%;
 }
 
-.palkinnot {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+.prizes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.palkinnot .left {
+.prizes h2 {
+    margin-left: 5em;
+}
+
+.prizes .left {
+    flex: 1.7;
     background: white;
+    padding: 1em;
 }
 
-.palkinnot .right{
+.prizes .left p {
+    margin: auto;
+    max-width: 40em;
+}
+
+.prizes .right{
+    flex: 1.3;
     background: rgb(180, 180, 180);
+    padding: 1em;
+}
+.prizes .right p {
+    margin: auto;
+    max-width: 20em;
 }
 
 .jatkokilpailut {
     max-width: 65em;
     margin: auto;
+    padding: 3em;
+}
+
+.jatkokilpailut h2 {
+    margin: 0;
+}
+
+.container {
+    background: rgba(136, 0, 227, 0.514);
 }
 
 .jarjestajat {
-  width: 500px;
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 55em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2em;
 }
 
-.jarjestajat > div {
-    flex: 1 1 150px;
-  }
+.jarjestajat img {
+    height: 10em;
+    width: 10em;
+}
 
   .jarj {
       margin: auto;
       max-width: 65em;
+      padding: 3em;
+  }
+
+  .jarj h2 {
+      margin: 0;
+  }
+
+  .container-2 {
+    background: rgb(180, 180, 180);
+  }
+
+  .yhteiso {
+    max-width: 65em;
+    margin: auto;
+    padding: 3em;
+  }
+
+  .yhteiso h2 {
+      margin: 0;
+  }
+
+  .earlier-years{
+    max-width: 65em;
+    margin: auto;
+    padding: 3em;
+  }
+
+  .earlier-years h2 {
+      margin: 0;
+  }
+
+  .contact {
+    max-width: 65em;
+    margin: auto;
+    padding: 3em;
+  }
+
+  .contact h2 {
+      margin: 0;
+  }
+
+  .contact-container {
+    background: #8800e3ff;
+    color:white;
+    padding-bottom: 7em;
   }
