@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39.14mm" height="36.133mm" version="1.1" viewBox="0 0 39.14 36.133" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-7.3963 -174.45)">
+  <rect x="13.048" y="1.9545" width="41.919" height="41.597" fill="#5245e5" stroke-width=".13518"/>
+  <rect x="60.327" y="2.0419" width="41.919" height="41.597" fill="#f6546b" stroke-width=".13518"/>
+  <path transform="matrix(.85193 0 0 .82483 21.985 -25.346)" d="m83.828 79.57-13.424-6.7604-13.179 7.2259 2.2812-14.856-10.945-10.301 14.834-2.4212 6.415-13.593 6.8867 13.36 14.91 1.9008-10.578 10.678z" fill="#fff" stroke-width=".26458"/>
+  <path d="m72.68 28.416-9.3243-8.4969 12.637-1.9971 5.4652-11.212 3.1918 15.102-8.6569-3.8902z" fill="#f6546b" stroke="#fff" stroke-width="1.0219" style="paint-order:stroke fill markers"/>
+  <g fill="#fff">
+   <ellipse cx="81.453" cy="5.9773" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="76.03" cy="17.759" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="63.091" cy="19.806" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="92.985" cy="39.971" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+  </g>
+  <rect x="12.984" y="47.259" width="41.919" height="41.597" fill="#ff7600" stroke-width=".13518"/>
+  <path transform="matrix(.85193 0 0 .82483 -25.359 19.871)" d="m83.828 79.57-13.424-6.7604-13.179 7.2259 2.2812-14.856-10.945-10.301 14.834-2.4212 6.415-13.593 6.8867 13.36 14.91 1.9008-10.578 10.678z" fill="#fff" stroke-width=".26458"/>
+  <path d="m25.336 73.633-9.3243-8.4969 12.637-1.9971 5.4652-11.212 3.1918 15.102-8.6569-3.8902z" fill="#ff7600" stroke="#fff" stroke-width="1.0219" style="paint-order:stroke fill markers"/>
+  <g fill="#fff">
+   <ellipse cx="34.11" cy="51.194" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="28.687" cy="62.976" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="15.748" cy="65.023" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="45.642" cy="85.188" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+  </g>
+  <rect x="60.327" y="47.259" width="41.919" height="41.597" fill="#8200ff" stroke-width=".13518"/>
+  <path transform="matrix(.85193 0 0 .82483 21.985 19.871)" d="m83.828 79.57-13.424-6.7604-13.179 7.2259 2.2812-14.856-10.945-10.301 14.834-2.4212 6.415-13.593 6.8867 13.36 14.91 1.9008-10.578 10.678z" fill="#fff" stroke-width=".26458"/>
+  <path d="m72.68 73.633-9.3243-8.4969 12.637-1.9971 5.4652-11.212 3.1918 15.102-8.6569-3.8902z" fill="#b57fe9" stroke="#fff" stroke-width="1.0219" style="paint-order:stroke fill markers"/>
+  <g fill="#fff">
+   <ellipse cx="81.453" cy="51.194" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="76.03" cy="62.976" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="63.091" cy="65.023" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   <ellipse cx="92.985" cy="85.188" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+  </g>
+ </g>
+ <g transform="translate(-7.3963 -174.45)">
+  <rect x="93.953" y="222.92" width="32.253" height="32.253" fill="#41444e" style="paint-order:fill markers stroke"/>
+  <rect x="3.3275" y="122.8" width="199.62" height="41.946" ry="0" fill="#765fff" style="paint-order:fill markers stroke"/>
+  <g transform="translate(-6.445 -101.62)">
+   <g fill="#fff">
+    <path transform="matrix(.26458 0 0 .26458 6.445 101.62)" d="m98.256 478.21 12.4 57.148-33.631-14.721-12.871 39.711-7.5508 46.371 43.619-22.555 44.43 21.102-9.2656-46.094 35.008-33.33-49.346-5.9316z" stroke-width=".8504"/>
+    <g>
+     <ellipse cx="32.437" cy="227.41" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+     <ellipse cx="26.863" cy="239.21" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+     <ellipse cx="13.563" cy="241.26" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+     <ellipse cx="44.291" cy="261.45" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+    </g>
+   </g>
+   <path d="m23.419 249.88-9.5842-8.5074 12.99-1.9996 5.6175-11.225 3.2808 15.12-8.8983-3.895z" fill="none" stroke="#fff" stroke-width=".637" style="paint-order:stroke fill markers"/>
+  </g>
+  <text transform="scale(1.0883 .91885)" x="43.990345" y="174.59741" fill="#ffffff" font-family="'Open Sans Condensed'" font-size="36.911px" letter-spacing="0px" stroke-width=".92277" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="43.990345" y="174.59741" fill="#ffffff" font-weight="bold" stroke-width=".92277">Datatähti</tspan></text>
+  <rect x="5.8079" y="176.73" width="199.62" height="53.108" ry="0" opacity="0" stroke-width="2.2504" style="paint-order:fill markers stroke"/>
+  <g fill="#765fff">
+   <path d="m27.449 176.23 3.2809 15.121-8.8982-3.8948-3.4055 10.507-1.9978 12.269 11.541-5.9676 11.755 5.5831-2.4515-12.196 9.2625-8.8186-13.056-1.5694z"/>
+   <g fill="#765fff">
+    <ellipse cx="27.445" cy="175.49" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+    <ellipse cx="21.871" cy="187.29" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+    <ellipse cx="8.5707" cy="189.34" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+    <ellipse cx="39.298" cy="209.53" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+   </g>
+  </g>
+  <path d="m18.427 197.96-9.5842-8.5074 12.99-1.9996 5.6175-11.225 3.2808 15.12-8.8983-3.895z" fill="none" stroke="#765fff" style="paint-order:stroke fill markers"/>
+  <g>
+   <text transform="scale(1.0883 .91885)" x="45.325035" y="228.68983" fill="#765fff" font-family="'Open Sans Condensed'" font-size="36.911px" letter-spacing="0px" stroke-width=".92277" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="45.325035" y="228.68983" fill="#765fff" font-weight="bold" stroke-width=".92277">Datatähti</tspan></text>
+   <rect x="115.24" y="19.809" width="45.636" height="74.581" ry="0" fill="#8800e3" stroke="#8800e3" stroke-width=".637" style="paint-order:fill markers stroke"/>
+   <rect x="147.03" y="18.921" width="46.346" height="75.824" fill="#41444e" style="paint-order:fill markers stroke"/>
+   <rect x="112.38" y="79.27" width="31.659" height="32.725" fill="#606576" style="paint-order:fill markers stroke"/>
+  </g>
+  <g transform="matrix(.67692 0 0 .67692 88.279 73.865)">
+   <g fill="#fff">
+    <path transform="matrix(.26458 0 0 .26458 6.445 101.62)" d="m98.256 478.21 12.4 57.148-33.631-14.721-12.871 39.711-7.5508 46.371 43.619-22.555 44.43 21.102-9.2656-46.094 35.008-33.33-49.346-5.9316z" stroke-width=".8504"/>
+    <g>
+     <ellipse cx="32.437" cy="227.41" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+     <ellipse cx="26.863" cy="239.21" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+     <ellipse cx="13.563" cy="241.26" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+     <ellipse cx="44.291" cy="261.45" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+    </g>
+   </g>
+   <path d="m23.419 249.88-9.5842-8.5074 12.99-1.9996 5.6175-11.225 3.2808 15.12-8.8983-3.895z" fill="none" stroke="#fff" stroke-width=".637" style="paint-order:stroke fill markers"/>
+  </g>
+ </g>
+ <g transform="translate(-7.3963 -174.45)" display="none">
+  <rect x="31.712" y="21.744" width="80.947" height="82.519" fill="#ff8080" style="paint-order:fill markers stroke"/>
+ </g>
+ <g transform="translate(-7.3963 -174.45)">
+  <path transform="matrix(.85193 0 0 .82483 -25.295 -25.434)" d="m83.828 79.57-13.424-6.7604-13.179 7.2259 2.2812-14.856-10.945-10.301 14.834-2.4212 6.415-13.593 6.8867 13.36 14.91 1.9008-10.578 10.678z" fill="#fff" stroke-width=".26458"/>
+ </g>
+ <g transform="translate(-7.3963 -174.45)">
+  <path d="m25.4 28.328-9.3243-8.4969 12.637-1.9971 5.4652-11.212 3.1918 15.102-8.6569-3.8902z" fill="#5245e5" stroke="#fff" stroke-width="1.0219" style="paint-order:stroke fill markers"/>
+  <g fill="#fff">
+   <g>
+    <ellipse cx="34.174" cy="5.8899" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+    <ellipse cx="28.751" cy="17.671" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+    <ellipse cx="15.812" cy="19.719" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+    <ellipse cx="45.706" cy="39.884" rx="1.1425" ry="1.0476" style="paint-order:fill markers stroke"/>
+   </g>
+   <path transform="matrix(.87568 0 0 .82585 -30.288 225.12)" d="m83.828 79.57-13.424-6.7604-13.179 7.2259 2.2812-14.856-10.945-10.301 14.834-2.4212 6.415-13.593 6.8867 13.36 14.91 1.9008-10.578 10.678z" stroke-width=".26458"/>
+  </g>
+  <path d="m21.821 278.95-9.5842-8.5074 12.99-1.9996 5.6175-11.225 3.2808 15.12-8.8983-3.895z" fill="#8200ff" stroke="#fff" stroke-width="1.0366" style="paint-order:stroke fill markers"/>
+  <g fill="#fff">
+   <ellipse cx="30.839" cy="256.48" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+   <ellipse cx="25.265" cy="268.28" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+   <ellipse cx="11.965" cy="270.33" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+   <ellipse cx="42.693" cy="290.52" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+  </g>
+  <text transform="scale(1.0883 .91885)" x="50.92828" y="319.68256" fill="#8200ff" font-family="'Open Sans Condensed'" font-size="36.911px" letter-spacing="0px" stroke-width=".92277" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="50.92828" y="319.68256" fill="#8200ff" font-weight="bold" stroke-width=".92277">Datatähti</tspan></text>
+  <rect x="10.33" y="91.114" width="12.74" height="12.116" ry="1.4581" fill="#b57fe9" stroke-width=".040221"/>
+  <g transform="matrix(.29483 0 0 .28342 7.2046 27.724)">
+   <path transform="matrix(.87568 0 0 .82585 -28.689 196.05)" d="m83.828 79.57-13.424-6.7604-13.179 7.2259 2.2812-14.856-10.945-10.301 14.834-2.4212 6.415-13.593 6.8867 13.36 14.91 1.9008-10.578 10.678z" fill="#fff" stroke-width=".26458"/>
+   <path d="m23.419 249.88-9.5842-8.5074 12.99-1.9996 5.6175-11.225 3.2808 15.12-8.8983-3.895z" fill="#b57fe9" stroke="#fff" stroke-width="1.0366" style="paint-order:stroke fill markers"/>
+   <g fill="#fff">
+    <ellipse cx="32.437" cy="227.41" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+    <ellipse cx="26.863" cy="239.21" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+    <ellipse cx="13.563" cy="241.26" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+    <ellipse cx="44.291" cy="261.45" rx="1.1744" ry="1.0488" style="paint-order:fill markers stroke"/>
+   </g>
+  </g>
+  <text transform="scale(1.11 .90089)" x="21.636921" y="114.03973" fill="#b57fe9" font-family="'Open Sans Condensed'" font-size="10.67px" letter-spacing="0px" stroke-width=".26674" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="21.636921" y="114.03973" fill="#b57fe9" font-weight="bold" stroke-width=".26674">Datatähti</tspan></text>
+ </g>
+</svg>
