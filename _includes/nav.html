@@ -1,12 +1,14 @@
-<nav class="nav">
+<nav class="nav" id="nav">
+    <button id="hide" onclick="hideNav()"> &#x2715;</button>
+    <button id="show" onclick="showNav()"> </button>
     <ol>
-        <li><img src="{{ '/assets/img/datatahtilogo.svg' | relative_url }}" id="nav-logo"></li>
-        <li>Osallistuminen</li>
-        <li>Palkinnot</li>
-        <li>Jatkokilpailut</li>
-        <li>Liity yhteisöön</li>
-        <li>Järjestäjät</li>
-        <li>Aiemmat vuodet</li>
-        <li>Yhteystiedot</li>
+        <li><a></a><img src="{{ '/assets/img/datatahtilogo.svg' | relative_url }}" id="nav-logo"></li>
+        <li><a href="#osallistuminen">Osallistuminen</a></li>
+        <li> <a href="#palkinnot">Palkinnot</a></li>
+        <li><a href="#jatkokilpailut">Jatkokilpailut</a></li>
+        <li><a href="#yhteiso">Liity yhteisöön</a></li>
+        <li><a href="#jarjestajat">Järjestäjät</a></li>
+        <li> <a href="#aiemmat-vuodet">Aiemmat vuodet</a></li>
+        <li><a href="#yhteystiedot">Yhteystiedot</a></li>
     </ol>
 </nav>
