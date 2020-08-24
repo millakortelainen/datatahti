@@ -1,8 +1,10 @@
 <nav class="nav" id="nav">
-    <button id="hide" onclick="hideNav()"> &#x2715;</button>
+    
     <button id="show" onclick="showNav()"> </button>
     <ol>
-        <li><a></a><img src="{{ '/assets/img/datatahtilogo.svg' | relative_url }}" id="nav-logo"></li>
+        <li><img src="{{ '/assets/img/tähti.svg' | relative_url }}" id="nav-logo-mobile"></li>
+        <li><button id="hide" onclick="hideNav()"> &#x2715;</button></li>
+        <li><img src="{{ '/assets/img/datatahtilogo.svg' | relative_url }}" id="nav-logo"></li>
         <li><a href="#osallistuminen">Osallistuminen</a></li>
         <li> <a href="#palkinnot">Palkinnot</a></li>
         <li><a href="#jatkokilpailut">Jatkokilpailut</a></li>
