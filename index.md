@@ -15,8 +15,4 @@ layout: default
 
 {% include jarjestajat.html %}
 
-{% include aiemmat-vuodet.html %}
-
-
-
 {% include yhteystiedot.html%}
