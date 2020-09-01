@@ -5,10 +5,6 @@ const hideNav = () => {
   function showNav() {
     document.getElementById("nav").className = "nav";
   }
-
-//  function showNavBtn() {
-//    document.getElementById("nav").className = "mobile-nav";
-//  }
   
   function reportWindowSize() {
     if (window.innerWidth < 500) {
@@ -23,3 +19,4 @@ const hideNav = () => {
   window.onload = () => {
     reportWindowSize();
   };
+
