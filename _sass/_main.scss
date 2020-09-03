@@ -64,6 +64,14 @@ h2 {
     text-decoration: none;
 }
 
+.nav ol li #logo-link:hover {
+    color: $light-color;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
 .nav ol li a:hover {
     color: $light-color;
     text-decoration: none;
