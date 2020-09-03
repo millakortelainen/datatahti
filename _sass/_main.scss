@@ -143,6 +143,7 @@ h2 {
 
 .header {
     background: $highlight-color;
+    background-image: url(../assets/img/kuutiotesti1.svg);
     background-size: cover;
     margin: 0;
     height: 43em;
@@ -241,7 +242,7 @@ h2 {
 */
 
 .prizes-wrapper {
-    height: 44em;
+    height: 42em;
     display: flex;
     align-items: stretch;
     flex-direction: row;
@@ -261,15 +262,20 @@ h2 {
     
 }
 
-.prizes-wrapper .left p {
+.prizes-wrapper p {
     max-width: 25rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
 }
 
 .prizes-wrapper .right {
+    
     flex: 1.3;
     background: $dark-color;
     color: $light-color;
 }
+
+
 
 /*
 * mobile
