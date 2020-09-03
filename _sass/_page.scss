@@ -3,3 +3,7 @@
     margin: auto;
     max-width: 55em;
 }
+
+.unfolding-div h1::after {
+    content: "＋";
+}
