@@ -292,6 +292,11 @@ h2 {
 */
 
 @media screen and (max-width: 500px) {
+    .prizes-wrapper p {
+        max-width: 25rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 /*
