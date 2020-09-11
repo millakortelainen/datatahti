@@ -61,6 +61,8 @@ a {
 .nav ol li a {
     text-decoration: none;
     color: inherit;
+    padding: .2em;
+    border-radius: .8em;
 }
 
 .nav ol li a:visited {
@@ -80,7 +82,7 @@ a {
     color: $light-color;
     text-decoration: none;
     background: $highlight-color;
-    padding: .3em;
+    padding: .2em;
     border-radius: .8em;
 }
 
