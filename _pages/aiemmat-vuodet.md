@@ -3,8 +3,64 @@ title: Aiemmat vuodet
 layout: page
 ---
 
+{% include open-this.html year=2020
+tulokset='<h3>Alkukilpailu</h3>
+
+<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<tr><td>1</td><td>Roope Salmi</td><td>Otaniemen lukio</td><td>475</td></tr>
+<tr><td>2</td><td>Unto Karila</td><td>Tapiolan lukio</td><td>471</td></tr>
+<tr><td>3</td><td>Henrik Aalto</td><td>Munkkiniemen yhteiskoulu</td><td>451</td></tr>
+<tr><td>4</td><td>Hermanni Huhtamäki</td><td>Ähtärin lukio</td><td>447</td></tr>
+<tr><td>5</td><td>Aaron Äärelä</td><td>Kotkan lyseo</td><td>445</td></tr>
+<tr><td>6</td><td>Eero Salla</td><td>Ounasvaaran lukio</td><td>445</td></tr>
+<tr><td>7</td><td>Patrik Palviainen</td><td>Joensuun lyseon lukio</td><td>434</td></tr>
+<tr><td>8</td><td>Aleksi Hannula</td><td>Lyseonpuiston lukio</td><td>434</td></tr>
+<tr><td>9</td><td>Kauri Pälsi</td><td>Helsingin suomalainen yhteiskoulu</td><td>431</td></tr>
+<tr><td>10</td><td>Antti Paraoanu</td><td>Etelä-Tapiolan lukio</td><td>431</td></tr>
+<tr><td>11</td><td>Into Almiala</td><td>Otaniemen lukio</td><td>416</td></tr>
+<tr><td>12</td><td>Juho Röyskö</td><td>Päivölän opisto</td><td>415</td></tr>
+<tr><td>13</td><td>Pauli Kauro</td><td>Kaurialan lukio</td><td>413</td></tr>
+<tr><td>14</td><td>Valtteri Aurela</td><td>Otaniemen lukio</td><td>410</td></tr>
+<tr><td>15</td><td>Antti Pham</td><td>Tampereen teknillinen lukio</td><td>391</td></tr>
+<tr><td>16</td><td>Tuomas Nummela</td><td>Etelä-Tapiolan lukio</td><td>377</td></tr>
+<tr><td>17</td><td>Eljas Lehtonen</td><td>Vaskivuoren lukio</td><td>376</td></tr>
+<tr><td>18</td><td>Tuomas Simula</td><td>Otaniemen lukio</td><td>376</td></tr>
+<tr><td>19</td><td>Samu Huovinen</td><td>Joensuun normaalikoulun lukio</td><td>375</td></tr>
+<tr><td>20</td><td>Jesperi Luoto</td><td>Otaniemen lukio</td><td>369</td></tr>
+<tr><td>21</td><td>Antti Mäkimattila</td><td>Kerttulin lukio</td><td>365</td></tr>
+<tr><td>22</td><td>Pekka Hautaniemi</td><td>Lappeenrannan lyseon lukio</td><td>359</td></tr>
+<tr><td>23</td><td>Stepan Fedotov</td><td>Munkkiniemen yhteiskoulu</td><td>354</td></tr>
+</table>
+
+<h3>Loppukilpailu</h3>
+
+<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<tr><td>1</td><td>Roope Salmi</td><td>Otaniemen lukio</td><td>600</td></tr>
+<tr><td>2</td><td>Henrik Aalto</td><td>Munkkiniemen yhteiskoulu</td><td>547</td></tr>
+<tr><td>3</td><td>Unto Karila</td><td>Tapiolan lukio</td><td>356</td></tr>
+<tr><td>4</td><td>Juho Röyskö</td><td>Päivölän opisto</td><td>295</td></tr>
+<tr><td>5</td><td>Pauli Kauro</td><td>Kaurialan lukio</td><td>266</td></tr>
+<tr><td>6</td><td>Valtteri Aurela</td><td>Otaniemen lukio</td><td>239</td></tr>
+<tr><td>7</td><td>Antti Paraoanu</td><td>Etelä-Tapiolan lukio</td><td>218</td></tr>
+<tr><td>8</td><td>Aleksi Hannula</td><td>Lyseonpuiston lukio</td><td>166</td></tr>
+<tr><td>9</td><td>Aaron Äärelä</td><td>Kotkan lyseo</td><td>147</td></tr>
+<tr><td>10</td><td>Antti Pham</td><td>Tampereen teknillinen lukio</td><td>139</td></tr>
+<tr><td>11</td><td>Pekka Hautaniemi</td><td>Lappeenrannan lyseon lukio</td><td>139</td></tr>
+<tr><td>12</td><td>Samu Huovinen</td><td>Joensuun normaalikoulun lukio</td><td>129</td></tr>
+<tr><td>13</td><td>Into Almiala</td><td>Otaniemen lukio</td><td>125</td></tr>
+<tr><td>14</td><td>Patrik Palviainen</td><td>Joensuun lyseon lukio</td><td>125</td></tr>
+<tr><td>15</td><td>Jesperi Luoto</td><td>Otaniemen lukio</td><td>118</td></tr>
+<tr><td>16</td><td>Hermanni Huhtamäki</td><td>Ähtärin lukio</td><td>100</td></tr>
+<tr><td>17</td><td>Tuomas Simula</td><td>Otaniemen lukio</td><td>100</td></tr>
+<tr><td>18</td><td>Stepan Fedotov</td><td>Munkkiniemen yhteiskoulu</td><td>100</td></tr>
+<tr><td>19</td><td>Antti Mäkimattila</td><td>Kerttulin lukio</td><td>100</td></tr>
+<tr><td>20</td><td>Tuomas Nummela</td><td>Etelä-Tapiolan lukio</td><td>100</td></tr>
+<tr><td>21</td><td>Eero Salla</td><td>Ounasvaaran lukio</td><td>100</td></tr>
+</table>'
+%}
+
 {% include open-this.html year=2019 
-tulokset='alkukilpailu
+tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
 <tr><td>1</td><td>Olli Järviniemi</td><td>Päivölän opisto</td><td>500</td></tr>
@@ -28,7 +84,7 @@ tulokset='alkukilpailu
 <tr><td>19</td><td>Kauri Pälsi</td><td>Helsingin suomalainen yhteiskoulu</td><td>390</td></tr>
 </table>
 
-loppukilpailu
+<h3>Loppukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
 <tr><td>1</td><td>Santeri Toivonen</td><td>Eiran aikuislukio</td><td>412</td></tr>
@@ -54,7 +110,7 @@ loppukilpailu
 %}
 
 {% include open-this.html year=2018
-tulokset='alkukilpailu
+tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
 <tr><td>1</td><td>Tuukka Yildirim</td><td>Janakkalan lukio</td><td>500</td></tr>
@@ -87,7 +143,7 @@ tulokset='alkukilpailu
 <tr><td>28</td><td>Valtteri Aurela</td><td>Olarin koulu</td><td>412</td></tr>
 <tr><td>29</td><td>Olli Mankki</td><td>Kotkan lyseo</td><td>412</td></tr></table>
 
-loppukilpailu
+<h3>Loppukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
 <tr><td>1</td><td>Tuukka Yildirim</td><td>Janakkalan lukio</td><td>500</td></tr>
@@ -123,7 +179,7 @@ loppukilpailu
 %}
 
 {% include open-this.html year=2017
-tulokset='alkukilpailu 
+tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
 <tr><td>1</td><td>Siiri Kuoppala</td><td>Olarin lukio</td><td>500</td></tr>
@@ -147,7 +203,7 @@ tulokset='alkukilpailu
 <tr><td>19</td><td>Ossi Sulkakoski</td><td>Hyvinkään Sveitsin lukio</td><td>368</td></tr>
 </table>
 
-loppukilpailu
+<h3>Loppukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
 <tr><td>1</td><td>Siiri Kuoppala</td><td>Olarin lukio</td><td>554</td></tr>
@@ -173,7 +229,7 @@ loppukilpailu
 %}
 
 {% include open-this.html year=2016
-tulokset='alkukilpailu
+tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
 <tr><td>1</td><td>Kalle Luopajärvi</td><td>Seinäjoen lukio</td><td>500</td></tr>
@@ -197,7 +253,7 @@ tulokset='alkukilpailu
 <tr><td>19</td><td>Jante Jomppanen</td><td>Oulun lyseon lukio</td><td>304</td></tr>
 </table>
 
-loppukilpailu
+<h3>Loppukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
 <tr><td>1</td><td>Kalle Luopajärvi</td><td>Seinäjoen lukio</td><td>595</td></tr>
