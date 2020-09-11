@@ -22,6 +22,10 @@ h2 {
     text-align: center;
 }
 
+a {
+    color: black;
+}
+
 /*
 * mobile
 */
@@ -347,6 +351,11 @@ h2 {
     padding: 2em;
 }
 
+.community-wrapper a {
+    color: white;
+}
+
+
 /* 
 * organizers - järjestäjät
 */
@@ -383,6 +392,7 @@ h2 {
     background: $light-color;
     padding: 0.5em;
 }
+
 
 /*
 * aiemmat vuodet - earlier years
@@ -435,3 +445,8 @@ h2 {
     margin: auto;
     padding: 3em;
 }
+
+.contact-wrapper a {
+    color: white;
+}
+
