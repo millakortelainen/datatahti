@@ -185,6 +185,15 @@ a {
     text-shadow: black 1px 1px 1px;
 }
 
+.simple-header{
+    height: 35rem
+}
+
+.simple-header h1{
+    font-size: 5em;
+    padding: 14rem 0 3rem 0;
+}
+
 /*
 * mobile 
 * header
@@ -324,6 +333,7 @@ a {
 .extra-competitions-wrapper {
     max-width: 45em;
     margin: auto;
+    text-align: center;
 }
 
 .extra-competitions-wrapper p {
@@ -350,10 +360,12 @@ a {
     max-width: 65em;
     margin: auto;
     padding: 2em;
+    text-align: center;
 }
 
-.community-wrapper a {
-    color: white;
+.community-wrapper img {
+    width: 150px;
+    display: inline-block;
 }
 
 

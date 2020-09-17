@@ -1,10 +1,12 @@
 .content {
-    padding-top: 6em;
+    padding-top: 3.5em;
     margin: auto;
     max-width: 55em;
     padding-bottom: 6em;
 }
 
 .unfolding-div h1::after {
+    padding-left: 1.5rem;
+    font-size: .8em;
     content: "＋";
 }

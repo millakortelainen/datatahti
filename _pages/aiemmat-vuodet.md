@@ -2,7 +2,6 @@
 title: Aiemmat vuodet
 layout: page
 ---
-
 {% include open-this.html year=2020
 tulokset='<h3>Alkukilpailu</h3>
 
