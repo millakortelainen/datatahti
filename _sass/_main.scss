@@ -174,7 +174,7 @@ a {
     font-size: 10em;
     margin: 0;
     text-align: center;
-    padding: 12rem 0 3rem 0;
+    padding: 14rem 0 3rem 0;
 }
 
 .header h2 {
@@ -182,6 +182,7 @@ a {
     display: block;
     text-align: center;
     padding-right: 1rem;
+    padding-top: 2rem;
     text-shadow: black 1px 1px 1px;
 }
 
@@ -205,11 +206,14 @@ a {
         margin-top: 1rem;
     }
 
+    .header{
+        height: 35rem;
+    }
+
     .header h1 {
         font-size: 6rem;
         line-height: 1em;
-        padding-bottom: 2rem;
-        padding-top: 3rem;
+        padding-top: 5rem;
     }
 
     .header h2 {
