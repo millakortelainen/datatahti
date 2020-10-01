@@ -1,11 +1,47 @@
----
-title: Aiemmat vuodet
-layout: page
----
-{% include open-this.html year=2020
-tulokset='<h3>Alkukilpailu</h3>
+<!DOCTYPE html>
+<html>
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href=/datatahti/assets/main.css>
+    <script src=/datatahti/assets/js/main.js></script>
+    <title>Datatähti</title>
+
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+    
+    <button id="show" onclick="showNav()"> </button>
+    <ol>
+        <li><a id="logo-link" href="/datatahti/index"><img src="/datatahti/assets/img/datat%C3%A4hti_logo_t%C3%A4hti.svg" id="nav-logo-mobile"></a></li>
+        <li><button id="hide" onclick="hideNav()"> &#x2715;</button></li>
+        <li><a id="logo-link" href="/datatahti/index"><img src="/datatahti/assets/img/datat%C3%A4hti_logo.svg" id="nav-logo"></a></li>
+        <li><a href="/datatahti/#osallistuminen">Osallistuminen</a></li>
+        <li> <a href="/datatahti/#palkinnot">Palkinnot</a></li>
+        <li><a href="/datatahti/#jatkokilpailut">Jatkokilpailut</a></li>
+        <li><a href="/datatahti/#yhteiso">Liity yhteisöön</a></li>
+        <li><a href="/datatahti/#jarjestajat">Järjestäjät</a></li>
+        <li><a href="/datatahti/#yhteystiedot">Yhteystiedot</a></li>
+        <li>|</li>
+        <li> <a href="/datatahti/pages/aiemmat-vuodet">Aiemmat vuodet</a></li>
+        <li> <a href="/datatahti/pages/en-info">In English</a> </li>
+    </ol>
+</nav>
+    <div class="header simple-header">
+    <h1>Aiemmat vuodet</h1>
+       <h2>Selaa Datatähden aiempien<br>
+            vuosien tuloksia.</h2>
+   </div>
+    <div class=content>
+        
+<div class="unfolding-div" id="click2020" onclick="test(document.getElementById('click2020'))">
+    <div class="wrapper" style="cursor:pointer"><h1>2020</h1></div>
+<div style="display:none;"><h3>Alkukilpailu</h3>
+
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Roope Salmi</td><td>Otaniemen lukio</td><td>475</td></tr>
 <tr><td>2</td><td>Unto Karila</td><td>Tapiolan lukio</td><td>471</td></tr>
 <tr><td>3</td><td>Henrik Aalto</td><td>Munkkiniemen yhteiskoulu</td><td>451</td></tr>
@@ -33,7 +69,7 @@ tulokset='<h3>Alkukilpailu</h3>
 
 <h3>Loppukilpailu</h3>
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Roope Salmi</td><td>Otaniemen lukio</td><td>600</td></tr>
 <tr><td>2</td><td>Henrik Aalto</td><td>Munkkiniemen yhteiskoulu</td><td>547</td></tr>
 <tr><td>3</td><td>Unto Karila</td><td>Tapiolan lukio</td><td>356</td></tr>
@@ -55,13 +91,16 @@ tulokset='<h3>Alkukilpailu</h3>
 <tr><td>19</td><td>Antti Mäkimattila</td><td>Kerttulin lukio</td><td>100</td></tr>
 <tr><td>20</td><td>Tuomas Nummela</td><td>Etelä-Tapiolan lukio</td><td>100</td></tr>
 <tr><td>21</td><td>Eero Salla</td><td>Ounasvaaran lukio</td><td>100</td></tr>
-</table>'
-%}
+</table></div>
 
-{% include open-this.html year=2019 
-tulokset='<h3>Alkukilpailu</h3>
+</div>
+<hr />
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<div class="unfolding-div" id="click2019" onclick="test(document.getElementById('click2019'))">
+    <div class="wrapper" style="cursor:pointer"><h1>2019</h1></div>
+<div style="display:none;"><h3>Alkukilpailu</h3>
+
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Olli Järviniemi</td><td>Päivölän opisto</td><td>500</td></tr>
 <tr><td>2</td><td>Roope Salmi</td><td>Olarin lukio</td><td>500</td></tr>
 <tr><td>3</td><td>Matias Järvenpää</td><td>Ulvilan lukio</td><td>499</td></tr>
@@ -85,7 +124,7 @@ tulokset='<h3>Alkukilpailu</h3>
 
 <h3>Loppukilpailu</h3>
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Santeri Toivonen</td><td>Eiran aikuislukio</td><td>412</td></tr>
 <tr><td>2</td><td>Roope Salmi</td><td>Olarin lukio</td><td>412</td></tr>
 <tr><td>3</td><td>Olli Järviniemi</td><td>Päivölän opisto</td><td>328</td></tr>
@@ -105,13 +144,16 @@ tulokset='<h3>Alkukilpailu</h3>
 <tr><td>17</td><td>Valtteri Ilola</td><td>Oulun normaalikoulun lukio</td><td>149</td></tr>
 <tr><td>18</td><td>Henri Ahola</td><td>Schola Europaea Luxembourg I</td><td>149</td></tr>
 <tr><td>19</td><td>Kauri Pälsi</td><td>Helsingin suomalainen yhteiskoulu</td><td>116</td></tr>
-</table>'
-%}
+</table></div>
 
-{% include open-this.html year=2018
-tulokset='<h3>Alkukilpailu</h3>
+</div>
+<hr />
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<div class="unfolding-div" id="click2018" onclick="test(document.getElementById('click2018'))">
+    <div class="wrapper" style="cursor:pointer"><h1>2018</h1></div>
+<div style="display:none;"><h3>Alkukilpailu</h3>
+
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Tuukka Yildirim</td><td>Janakkalan lukio</td><td>500</td></tr>
 <tr><td>2</td><td>Roope Salmi</td><td>Olarin lukio</td><td>500</td></tr>
 <tr><td>3</td><td>Juha Harviainen</td><td>Helsingin matematiikkalukio</td><td>500</td></tr>
@@ -144,7 +186,7 @@ tulokset='<h3>Alkukilpailu</h3>
 
 <h3>Loppukilpailu</h3>
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Tuukka Yildirim</td><td>Janakkalan lukio</td><td>500</td></tr>
 <tr><td>2</td><td>Roope Salmi</td><td>Olarin lukio</td><td>500</td></tr>
 <tr><td>3</td><td>Juha Harviainen</td><td>Helsingin matematiikkalukio</td><td>500</td></tr>
@@ -174,13 +216,16 @@ tulokset='<h3>Alkukilpailu</h3>
 <tr><td>27</td><td>Into Almiala</td><td>Olarin koulu</td><td>412</td></tr>
 <tr><td>28</td><td>Valtteri Aurela</td><td>Olarin koulu</td><td>412</td></tr>
 <tr><td>29</td><td>Olli Mankki</td><td>Kotkan lyseo</td><td>412</td></tr>
-</table>'
-%}
+</table></div>
 
-{% include open-this.html year=2017
-tulokset='<h3>Alkukilpailu</h3>
+</div>
+<hr />
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<div class="unfolding-div" id="click2017" onclick="test(document.getElementById('click2017'))">
+    <div class="wrapper" style="cursor:pointer"><h1>2017</h1></div>
+<div style="display:none;"><h3>Alkukilpailu</h3>
+
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Siiri Kuoppala</td><td>Olarin lukio</td><td>500</td></tr>
 <tr><td>2</td><td>Juha Harviainen</td><td>Helsingin matematiikkalukio</td><td>500</td></tr>
 <tr><td>3</td><td>Antti Röyskö</td><td>Päivölän opisto</td><td>500</td></tr>
@@ -204,7 +249,7 @@ tulokset='<h3>Alkukilpailu</h3>
 
 <h3>Loppukilpailu</h3>
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Siiri Kuoppala</td><td>Olarin lukio</td><td>554</td></tr>
 <tr><td>2</td><td>Juha Harviainen</td><td>Helsingin matematiikkalukio</td><td>501</td></tr>
 <tr><td>3</td><td>Roope Salmi</td><td>Olarin koulu</td><td>477</td></tr>
@@ -224,13 +269,16 @@ tulokset='<h3>Alkukilpailu</h3>
 <tr><td>17</td><td>Kasperi Raninen</td><td>Uudenkaupungin lukio</td><td>172</td></tr>
 <tr><td>18</td><td>Laura Saarhelo</td><td>Olarin lukio</td><td>128</td></tr>
 <tr><td>19</td><td>Konsta Tiilikainen</td><td>Ressun lukio</td><td>100</td></tr>
-</table>'
-%}
+</table></div>
 
-{% include open-this.html year=2016
-tulokset='<h3>Alkukilpailu</h3>
+</div>
+<hr />
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<div class="unfolding-div" id="click2016" onclick="test(document.getElementById('click2016'))">
+    <div class="wrapper" style="cursor:pointer"><h1>2016</h1></div>
+<div style="display:none;"><h3>Alkukilpailu</h3>
+
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Kalle Luopajärvi</td><td>Seinäjoen lukio</td><td>500</td></tr>
 <tr><td>2</td><td>Hannes Ihalainen</td><td>Lahden yhteiskoulun lukio</td><td>500</td></tr>
 <tr><td>3</td><td>Pietari Kaskela</td><td>Viikin normaalikoulun lukio</td><td>466</td></tr>
@@ -254,7 +302,7 @@ tulokset='<h3>Alkukilpailu</h3>
 
 <h3>Loppukilpailu</h3>
 
-<table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
+<table><tr><th width="50" align="left">sija</th><th width="225" align="left">nimi</th><th width="325" align="left">koulu</th><th width="100" align="left">pisteet</th></tr>
 <tr><td>1</td><td>Kalle Luopajärvi</td><td>Seinäjoen lukio</td><td>595</td></tr>
 <tr><td>2</td><td>Pietari Kaskela</td><td>Viikin normaalikoulun lukio</td><td>440</td></tr>
 <tr><td>3</td><td>Juha Harviainen</td><td>Helsingin matematiikkalukio</td><td>404</td></tr>
@@ -274,6 +322,13 @@ tulokset='<h3>Alkukilpailu</h3>
 <tr><td>17</td><td>Kalle Hiltunen</td><td>Olarin lukio</td><td>67</td></tr>
 <tr><td>18</td><td>Tuomas Pekkanen</td><td>Ylöjärven lukio</td><td>67</td></tr>
 <tr><td>19</td><td>Alexey Ryzhenkov</td><td>Helsingin matematiikkalukio</td><td>52</td></tr>
-</table>'
-%}
+</table></div>
 
+</div>
+<hr />
+
+
+    </div>
+</body>
+
+</html>
