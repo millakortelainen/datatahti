@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<style>
+td { width: 20px; height: 20px; background: white; }
+td.m { background: black; }
+</style>
+<title>Datatähti 2013: Loppukilpailu</title>
+<h1>Datatähti 2013: Loppukilpailu</h1>
+
+<hr>
+
+<h2>Tehtävänanto</h2>
+
+<p>Uolevi on tehnyt mustavalkoisen taideteoksen
+ja haluaa liittää sen pelinsä alkuun.
+Valitettavasti Uolevin käyttämä ohjelmointikieli
+sisältää vain yhden piirtokomennon (xor-komento),
+joka suorittaa xor-operaation valitun
+suorakulmion muotoisen alueen pikseleille.</p>
+
+<p>Xor-komento muuttaa valitun
+suorakulmaisen alueen valkoiset
+pikselit mustiksi ja mustat pikselit
+valkoisiksi.
+Operaation suorittavan komennon
+yhteydessä annetaan
+valitun suorakulmion vasen ylänurkka
+ja oikea alanurkka.
+Kuvan vasemman ylänurkan kohta on (1, 1).</p>
+
+<p>
+Tarkastellaan esimerkiksi seuraavaa komentosarjaa
+5x5-kuvassa:
+</p>
+
+<ol>
+<li> xor 2 2 4 3
+<li> xor 3 3 5 5
+<li> xor 3 1 3 4
+</ol>
+
+<p>Lähtökohtana on kokonaan valkoinen kuva:</p>
+
+<table border>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+
+<p>Komennon "xor 2 2 4 3" jälkeen tuloksena on:</p>
+
+<table border>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+
+<p>Komennon "xor 3 3 5 5" jälkeen tuloksena on:</p>
+
+<table border>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td></tr><tr><td>&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td></tr></table>
+
+<p>Komennon "xor 3 1 3 4" jälkeen tuloksena on:</p>
+
+<table border>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td class="m">&nbsp;</td><td>&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td class="m">&nbsp;</td></tr><tr><td>&nbsp;</td><td class="m">&nbsp;</td><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td><td class="m">&nbsp;</td></tr></table>
+
+<p>Uolevin taideteos on kooltaan 200x200 pikseliä ja
+se on tiedostossa <a href="dt13l_xor.in">dt13l_xor.in</a>.
+Tehtävänäsi on etsiä sarja xor-komentoja,
+jotka tuottavat taideteoksen.
+Mitä vähemmän komentoja tarvitset,
+sitä paremmaksi vastauksesi katsotaan.
+</p>
+
+<h3>Palautus</h3>
+
+<p>Tehtävässä palautetaan tekstimuotoinen kuvaus 
+xor-komennoista.
+Tehtävässä ei siis palauteta laatimasi ohjelman koodia.</p>
+
+<p>Kuvauksen ensimmäisellä rivillä on xor-komentojen määrä.
+Tämän jälkeen jokaisella seuraavalla rivillä on neljä lukua
+vastaten yksittäisessä xor-komennossa valitun
+suorakulmion vasenta ylänurkkaa ja oikeaa alanurkkaa.
+Kun komennot suoritetaan antamassasi järjestyksessä,
+tuloksena pitää saada Uolevin taideteos.</p>
+
+<p>Esimerkiksi seuraava kuvaus vastaa esimerkkiä:</p>
+
+<pre>
+3
+2 2 4 3
+3 3 5 5
+3 1 3 4
+</pre>

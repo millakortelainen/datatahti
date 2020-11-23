@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Datatähti 2006: Alkukilpailu</title>
+<html>
+<head>
+<style type="text/css">
+	table {
+		border-collapse: collapse;
+		border: 2px solid black;
+		border-color: #888 #444 #444 #888;
+		margin: 1em;
+	}
+	td, th {
+		border: 1px solid #888;
+	}
+</style>
+</head>
+
+<body>
+<h1>Datatähti 2006: Alkukilpailu</h1>
+
+<h2>Tehtävä 1: Mayojen numerot</h2>
+
+<p>Meksikossa Jukatanin niemimaalla eläneillä Maya-intiaaneilla
+oli kehittynyt lukujärjestelmä, jossa luvut kirjoitettiinkin
+toisin kuin meillä. Laadi tietokoneohjelma, joka lukee
+syötteenään yhden luvun meille tutussa 10-järjestelmässä, ja
+tulostaa sen Maya-intiaanien tavalla.</p>
+
+<h3>1.1. Syöttö</h3>
+
+<p>Ohjelmasi lukee syötteensä tekstitiedostosta nimeltä
+<code>maya.in</code>.</p>
+
+<p>Tiedoston ainoa rivi koostuu yhdestä
+kokonaisluvusta&nbsp;<var>n</var>, joka on väliltä
+0&nbsp;...&nbsp;1&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000.</p>
+
+<h3>1.2. Tulostus</h3>
+
+<p>Ohjelmasi kirjoittaa tulosteensa tekstitiedostoksi nimeltä
+<code>maya.out</code>. Sen ainoana rivinä pitää olla syötteenä
+annetun luvun&nbsp;<var>n</var> esitys seuraavalla
+Maya-intiaanien tavalla:</p>
+
+<ul>
+<li>Maya-intiaanit käyttivätkin peräti 20 erilaista
+numeromerkkiä, eikä vain 10 kuten meillä.</li>
+
+<li>Peräkkäisten numeromerkkien väliin jätettiin tilaa. Tilan
+ASCII -vastine olkoon yksi välilyöntimerkki.</li>
+
+<li>Numeromerkkinä '<code>0</code>' eli nollana käytettiin
+simpukankuoren kuvaa. Simpukankuoren ASCII-vastine olkoon
+merkki&nbsp;'<code>@</code>'.</li>
+
+<li>Muut numeromerkit '<code>1</code>'...'<code>19</code>'
+saatiin <em>periaatteessa</em> kirjoittamalla yhtä monta
+pistettä. Pisteen ASCII-vastine olkoon
+merkki&nbsp;'<code>*</code>'.
+
+<p>Mayat ottivat kuitenkin käyttöön vielä
+<em>lyhennysmerkinnän:</em> 5&nbsp;pisteen sijasta
+piirretäänkin 1&nbsp;pystyviiva. Pystyviivan ASCII-vastine
+olkoon merkki&nbsp;"<code>!</code>".</p>
+
+<p>Silloin kunkin numeromerkin sisällä korvataan niin monta
+pistettä viivoilla kuin mahdollista oikealta alkaen.</p>
+
+<p>Esimerkiksi meidän lukuamme&nbsp;13 vastaava ASCII-esitys
+on</p>
+<pre>
+***!!
+</pre>
+
+<p>koska 13=5+5+3 eli voimme käyttää enimmillään
+2&nbsp;pystyviivaa, ja sen jälkeen jäljelle jää vielä
+3&nbsp;pistettä. Ensin siis kirjoitetaan pisteet ja sitten
+pystyviivat.</p>
+</li>
+</ul>
+<p>Silloin esimerkiksi luvun&nbsp;15&nbsp;000 ASCII-esitys on</p>
+<pre>
+* **!!! !! @
+</pre>
+<p>koska 15&nbsp;000 = 1*20<sup>3</sup> + 17*20<sup>2</sup> +
+10*20<sup>1</sup> + 0*20<sup>0</sup>, ja tyhjien rivien erottelemat
+luvut ovat vasemmalta lukien 1 (1&nbsp;piste), 17 (2&nbsp;pistettä
+ja 3&nbsp;pystyviivaa), 10 (2&nbsp;pystyviivaa) ja 0 (simpukka).</p>
+
+<h3>1.3. Pisteytys</h3>
+
+<p>Kirjoita ohjelmasi lähdekooditiedostoksi nimeltä
+<code>maya.</code><var>x</var> missä <var>x</var> on käyttämäsi
+ohjelmointikielen mukainen <a href="#suffix">loppuliite</a>.</p>
+
+<p>Ohjelmasi saa kutakin testiä varten 1&nbsp;sekunnin
+<a href="#time">keskusyksikköaikaa</a> ja 16&nbsp;megatavua
+<a href="#core">keskusmuistia</a>.</p>
+
+<p>Ohjelmaasi testataan 20&nbsp;syötteellä. Saat kustakin
+testistä täydet 5&nbsp;pistettä, jos ohjelmasi tulostaa syötettä
+vastaavan ASCII-esityksen resurssirajoja rikkomatta, ja muuten
+0&nbsp;pistettä.</p>
+
+<p>Tämän tehtävän maksimi on siis 100&nbsp;pistettä.</p>
+
+<h2>Tehtävä 2: Sonic the Screwdriver</h2>
+
+<p>Tarkastellaan seuraavaa peliä:</p>
+
+<p>Pelilautana on <var>n</var>&nbsp;rivin ja
+<var>n</var>&nbsp;sarakkeen kokoinen ruudukko, jonka jokainen
+ruutu on joko käytävää tai seinää.</p>
+
+<p>Tässä labyrintissä vaeltaa yksi oma nappulasi, joka yrittää
+päästä sieltä ulos. Vastustajinasi on
+<var>m</var>&nbsp;kappaletta <em>robotti</em>nappuloita, jotka
+yrittävät estää ulospääsysi.</p>
+
+<p>Ensin on sinun siirtovuorosi.</p>
+
+<ul>
+<li>Jos nappulasi on nyt laudan reunaruudussa, niin voit
+siirtää sen pois laudalta, ja olet voittanut pelin.</li>
+
+<li>Muuten voit siirtää oman nappulasi mihin tahansa
+naapuriruutuun, kunhan siinä ei ole seinää eikä robottia.
+Vinoittain et kuitenkaan saa siirtää, joten mahdollisia
+naapuriruutuja on aina korkeintaan 4&nbsp;kappaletta.</li>
+
+<li>Voit myös pitää nappulasi paikoillaan sen nykyisessä
+ruudussa, jos niin haluat.</li>
+</ul>
+
+<p>Sitten jokainen roboteista tekee oman siirtonsa. Ne siirtyvät
+muuten samalla lailla kuin sinäkin, paitsi että</p>
+
+<ul>
+<li>jos jokin robotti pystyy siirtymään samaan ruutuun, jossa
+oma nappulasi nyt on, niin se vangitsee nappulasi, ja häviät
+pelin</li>
+
+<li>robotti ei koskaan siirry pois laudalta.</li>
+</ul>
+
+<p>Näin peli jatkuu vuorotellen, kunnes jompi kumpi voittaa. Peli
+voi myös jatkua ikuisesti: nappulat voivat esimerkiksi jäädä
+kiertämään kehää.</p>
+
+<p>Annettu pelitilanne on <em>tylsä</em> jos voisit ilmoittaa
+etukäteen sellaisen reitin, jota pitkin nappulasi pääsee pois
+laudalta, eivätkä robotit voi sitä estää, vaikka saivatkin kuulla
+reittisi etukäteen.</p>
+
+<p>Tehtävänäsi on kirjoittaa ohjelma, joka ilmoittaa syötteenä
+annetusta pelitilanteesta, onko se tylsä vaiko ei.</p>
+
+<h3>2.1. Syöttö</h3>
+
+<p>Ohjelmasi lukee syötteensä tekstitiedostosta nimeltä
+<code>maze.in</code>. Syöte kuvaa yhden pelitilanteen seuraavalla
+tavalla.</p>
+
+<p>Syötteen ensimmäisenä rivinä on kokonaisluku&nbsp;<var>n</var>
+joka ilmoittaa pelilaudan sivun pituuden. Se on väliltä
+1&nbsp;...&nbsp;1&nbsp;000.</p>
+
+<p>Sen jälkeen tiedostossa on vielä <var>n</var>&nbsp;riviä.
+Jokaisella rivillä on <var>n</var>&nbsp;merkkiä ennen
+rivinvaihtoa. Tämä <var>n</var>&nbsp;rivin ja
+<var>n</var>&nbsp;sarakkeen merkkiruudukko kuvaa laudan
+vastaavien ruutujen sisällöt seuraavasti:</p>
+
+<dl>
+<dt><code>#</code></dt>
+
+<dd>Tässä ruudussa on seinä.</dd>
+
+<dt><code>X</code></dt>
+
+<dd>Tässä ruudussa on oma nappulasi. Näitä merkkejä on tasan
+yksi kappale syötteessä.</dd>
+
+<dt><code>R</code></dt>
+
+<dd>Tässä ruudussa on jokin roboteista.</dd>
+
+<dt><code>.</code></dt>
+
+<dd>Tässä ruudussa on käytävä, jossa ei tällä hetkellä seiso
+yhtään nappulaa.</dd>
+</dl>
+
+<p>Esimerkiksi seuraavassa kuvassa on 10*10&nbsp;ruudun ruudukko,
+jossa on oman nappulasi lisäksi 2&nbsp;robottia:</p>
+<pre>
+10
+##########
+#.........
+#.########
+#.#......#
+#.#......#
+#.#.....R#
+#.#......#
+#.#..R...#
+#....X....
+##########
+</pre>
+
+<p>Tämä syöte <em>on</em> tylsä: Voisit ilmoittaa "Minun
+nappulani <code>X</code> lähtee suoraan vasemmalle tunneliin!"
+eikä kumpikaan robotti <code>R</code> saisi estettyä sen
+pakoa.</p>
+
+<p>(Jos olisitkin ilmoittanut "Minun nappulani <code>X</code>
+lähtee suoraan oikealle kohden lähintä ulko-ovea!" niin
+oikeanpuoleinen robotti olisi huomannut siitä, että sen
+kannattaisi lähteä suoraan alas estämään pakoreittisi.)</p>
+
+<h3>2.2. Tulostus</h3>
+
+<p>Ohjelmasi kirjoittaa tulosteensa tekstitiedostoksi nimeltä
+<code>maze.out</code>. Sen sisältönä täytyy olla yksi
+kokonaisluku seuraavasti:</p>
+
+<ul>
+<li>Jos syötteenä saatu pelitilanne <em>on</em> tylsä, niin
+tulostuksena pitää olla <em>pienin</em> askelmäärä, jolla
+nappulasi pääsee pois laudalta sellaista reittiä pitkin, jota
+robotit eivät pysty estämään. Esimerkiksi edellisessä
+esimerkkisyötteessä tämä tulostettava luku on&nbsp;20.</li>
+
+<li>Jos taas syötteenä saatu pelitilanne <em>ei</em> olekaan
+tylsä, niin tulostetaankin luku&nbsp;<code>0</code>.</li>
+</ul>
+
+<h3>2.3. Pisteytys</h3>
+
+<p>Kirjoita ohjelmasi lähdekooditiedostoksi nimeltä
+<code>maze.</code><var>x</var> missä <var>x</var> on käyttämäsi
+ohjelmointikielen mukainen <a href="#suffix">loppuliite</a>.</p>
+
+<p>Ohjelmasi saa kutakin testiä varten 1&nbsp;sekunnin
+<a href="#time">keskusyksikköaikaa</a> ja 64&nbsp;megatavua
+<a href="#core">keskusmuistia</a>.</p>
+
+<p>Ohjelmaasi testataan 20&nbsp;syötteellä. Kukin testi
+pisteytetään seuraavasti:</p>
+
+<ul>
+<li>Jos syöte on tylsä, ja ohjelmasi antaa sille täysin oikean
+vastauksen resurssirajoja rikkomatta, niin se saa täydet
+5&nbsp;pistettä.</li>
+
+<li>Jos syöte on tylsä, mutta ohjelmasi löytää turhan pitkän
+reitin resurssirajoja rikkomatta, niin se saa vain
+2&nbsp;pistettä.</li>
+
+<li>Jos syöte ei olekaan tylsä, ja ohjelmasi havaitsee sen
+resurssirajoja rikkomatta, niin se saa täydet
+5&nbsp;pistettä.</li>
+
+<li>Muuten ohjelmasi saa 0&nbsp;pistettä.</li>
+</ul>
+
+<p>Tämän tehtävän maksimi on siis 100&nbsp;pistettä.</p>
+
+<p>90% kaikista testisyötteistä on tylsiä. 50% kaikista
+testisyötteistä on sellaisia, jossa <var>n</var> on korkeintaan
+100.</p>
+
+<h2>3. Sääntöjä ja ohjeita</h2>
+
+<p>Allaoleviin sääntöihin ja ohjeisiin voi ilmestyä lisäyksiä ja
+selvennyksiä <a id="webpage"><em>kisasivustolle</em></a> osoitteessa
+<a href="http://www.cs.helsinki.fi/matti.nykanen/datatahti/"><code>http://www.cs.helsinki.fi/matti.nykanen/datatahti/</code></a>.
+Seuraa siis sitä kilpailun kuluessa!</p>
+
+<h3>3.1. Lähdekooditiedosto</h3>
+
+<p>Kirjoita jokaisen tehtävän ratkaisu omaksi
+lähdekooditiedostokseen, jonka <a id="suffix">loppuliite</a> <var>x</var> määräytyy sen
+ohjelmointikielestä seuraavasti:</p>
+
+<table>
+<tr>
+<th>kieli</th>
+<th>liite</th>
+</tr>
+<tr>
+<td>C</td>
+<td><code>c</code></td>
+</tr>
+<tr>
+<td>C++</td>
+<td><code>cpp</code></td>
+</tr>
+<tr>
+<td>Pascal</td>
+<td><code>pas</code></td>
+</tr>
+</table>
+
+<p>Aloita tiedosto kommentilla, jossa on seuraavat tiedot:</p>
+
+<ol>
+<li>otsikkoteksti "<code>Datatähti 2006
+-alkukilpailu</code>"</li>
+
+<li>tehtävän numero (<code>1</code> tai <code>2</code>)</li>
+
+<li>oma nimesi</li>
+
+<li>oma syntymäaikasi</li>
+</ol>
+
+<p>Muuten tiedoston kirjoitusasu on vapaa.</p>
+
+<p>Ohjelmasi on noudatettava seuraavia vaatimuksia, tai
+seurauksena saattaa olla pistemenetyksiä:</p>
+
+<ul>
+<li>Ohjelma saa lukea ja kirjoittaa vain tehtävässä nimettyjä
+tiedostoja.
+
+<p>Erityisesti näppäimistöltä lukeminen tai näytölle
+tulostaminen on kiellettyä.</p>
+</li>
+
+<li>Tulostiedoston täytyy aina päättyä rivinvaihtoon.</li>
+
+<li>Ohjelmointikielissä C ja C++ pääohjelman <code>main</code>
+suorituksen pitää päättyä lauseeseen
+<code>return&nbsp;0;</code>.
+
+<p>(Ohjelmointikielessä Pascal sinun ei tarvitse huolehtia
+siitä, koska kääntäjä tekee sen puolestasi.)</p>
+</li>
+
+<li>Ohjelmointikielessä pitää rajoittua vain sen
+standardoituihin peruspiirteisiin, ja välttää laite- tai
+kääntäjäkohtaisia erikoisuuksia.
+
+<ul>
+<li>Ohjelmointikielissä C ja C++ on käytössä standardoitu
+matematiikkakirjasto (eli käännettäessä annetaan valitsin
+<code>-lm</code>).</li>
+
+<li>Ohjelmointikielessä C++ on käytössä myös kirjasto
+<a href="http://www.sgi.com/tech/stl/table_of_contents.html">Standard
+Template Library (STL)</a>, koska se on osa kielen
+standardia.</li>
+</ul>
+</li>
+</ul>
+
+<h3>3.2. Resurssirajat</h3>
+
+<p>Tehtävissä viitattiin seuraaviin resurssirajoihin:</p>
+
+<dl>
+<dt><a id="core">Työmuisti</a></dt>
+
+<dd>käsittää kaiken muun ohjelmasi käyttämän muistin paitsi sen
+suorituskelpoista ohjelmakoodia.</dd>
+
+<dt><a id="time">Keskusyksikköaika</a></dt>
+
+<dd>
+sisältää sen ajan, jonka tietokoneen keskusyksikkö käyttää
+suorittaessaan sinun omaa ohjelmakoodiasi sekä sen kutsumia
+kirjastoaliohjelmia. Se ei sisällä sitä aikaa, jonka
+keskusyksikkö käyttää suorittaessaan
+käyttöjärjestelmäpalveluita, kuten tiedostojen avaamisia ja
+sulkemisia.
+
+<p>Ohjelmat testataan sellaisella tietokoneella, jossa
+keskusyksikkönä on Intel Pentium&nbsp;4 jonka kellotaajuus on
+3,00GHz (5993,58&nbsp;bogoMips). Sen perusteella voit yrittää
+arvioida, kuinka pitkä vastaava keskusyksikköaikaraja on
+omalla koneellasi.</p>
+
+<p>(Testikoneen käyttöjärjestelmänä on Linux, ja
+keskusyksikköaika on sen ns. "user time".)</p>
+</dd>
+</dl>
+
+<h3>3.3. Käytetyt kääntäjät</h3>
+
+<table>
+<tr>
+<th>kieli</th>
+<th>kääntäjä</th>
+<th>versio</th>
+<th>kielistandardi (valitsimet)</th>
+<th>Optimointitaso</th>
+</tr>
+<tr>
+<td>C</td>
+<td><a href="http://gcc.gnu.org/"><code>gcc</code></a></td>
+<td>4.0.<var>y</var></td>
+<td>ANSI/ISO&nbsp;C89/90 (<code>-ansi</code>)</td>
+<td><code>-O2 -static</code></td>
+</tr>
+<tr>
+<td>C++</td>
+<td><a href="http://gcc.gnu.org/"><code>g++</code></a></td>
+<td>4.0.<var>y</var></td>
+<td>ISO&nbsp;C++ (<code>-ansi</code>)</td>
+<td><code>-O2 -static</code></td>
+</tr>
+<tr>
+<td>Pascal</td>
+<td><a href="http://www.freepascal.org/">Free Pascal</a></td>
+<td>2.0.<var>z</var></td>
+<td>Borland Turbo Pascal 7.0 (<code>-Mtp&nbsp;-Sg</code>)</td>
+<td><code>-O2 -XS</code></td>
+</tr>
+</table>
+
+<h3>3.4. Ratkaisujen palautus</h3>
+
+<p>Jos samalta henkilöltä tulee kilpailuaikana useita eri
+ratkaisuja, niin <em>viimeinen</em> niistä arvostellaan.</p>
+
+<p>Jos kilpailija lähettää vastauksensa myöhästyneenä, niin
+järjestäjillä on oikeus jättää se huomiotta.</p>
+
+<p>Palautukseen on useita eri tapoja.</p>
+
+<h4>3.4.1. Sähköpostitse</h4>
+
+<p>Lähetä sähköpostiviestisi <a id="email">osoitteeseen</a> <a href="mailto:matti.nykanen@cs.helsinki.fi"><code>matti.nykanen@cs.helsinki.fi</code></a>.
+Viestin rakenne on seuraava:</p>
+
+<ul>
+<li>Kirjoita otsikkokenttään <code>subject:</code> teksti
+"<code>Datatähti 2006 -alkukilpailun vastaukset</code>".</li>
+
+<li>Kirjoita viestin rungoksi <a id="contact">omat yhteystietosi</a>:
+
+<ol>
+<li>nimesi</li>
+<li>syntymäaikasi</li>
+<li>postiosoitteesi</li>
+<li>puhelinnumerosi</li>
+<li>sähköpostiosoitteesi.</li>
+</ol>
+</li>
+
+<li>Kumpikin lähdekooditiedosto liitetään tähän viestiin omana
+MIME-liitteenään.
+(Sähköpostiohjelmissa tämän toiminnon nimi on yleensä
+"<code>Liitä&nbsp;tiedosto</code>",
+"<code>Attach&nbsp;File</code>" tai vastaava.)
+</li>
+</ul>
+
+<p>Viestin katsotaan lähteneen ajoissa, jos sen aikaleima on
+kilpailuajan sisällä. Tämä aikaleima katsotaan viestin
+välittäneestä palvelinkoneesta.</p>
+
+<h4>3.4.2. Kirjeitse</h4>
+
+<p><em>Huomaa:</em> Palauta ratkaisusi kirjeitse vain jos muut
+tavat eivät ole mahdollisia!</p>
+
+<p>Valmista yksi 3,5&nbsp;tuuman DOS-formatoitu levyke, jonka
+juurihakemistossa on seuraavat tiedostot:</p>
+
+<ul>
+<li>ratkaisujen lähdekooditiedostot</li>
+
+<li>tekstitiedosto nimeltä <code>contents.txt</code>, joka
+sisältää samat <a href="#contact">yhteystietosi</a> kuin
+sähköpostiviestin runkoon vaadittiin.</li>
+</ul>
+
+<p>Laita (mielellään pehmustettuun) kirjekuoreen levykkeen
+lisäksi tämä tiedosto <code>contents.txt</code> tulostettuna
+paperille (siltä varalta, että levykkeesi hajoaakin matkalla).
+Lähetä kirje seuraavaan <a id="snailmail">osoitteeseen</a>:</p>
+
+<address>
+Matti Nykänen<br>
+Datatähti<br>
+Tietojenkäsittelytieteen laitos<br>
+PL 68 (Gustaf Hällströmin katu 2b)<br>
+00014 Helsingin yliopisto
+</address>
+
+<p>(Levykettä ei palauteta.)</p>
+
+<p>Kirjeen katsotaan lähteneen ajoissa, jos sen postileima on
+kilpailuajan sisällä. <em>Huomaa:</em> Postin käsittelyn hitauden
+vuoksi tämä tarkoittaa käytännössä sitä, että kirje on
+postitettava jo hyvissä ajoin ennen kilpailuajan viimeistä
+iltaa!</p>
+
+<h4>3.4.3. Verkkopalvelun kautta</h4>
+
+<p>Järjestäjät suunnittelevat erillisen verkkopalvelun
+perustamista ratkaisujen vastaanottamiseksi. Jos verkkopalvelu
+saadaan toimintaan, niin siitä ilmoitetaan
+<a href="#webpage">kisasivustolla</a>.</p>
+
+<h3>3.5. Kysymys- ja vastauspalsta</h3>
+
+<p>Voit esittää täsmennyskysymyksiä algoritmitehtävistä
+sähköpostitse tai kirjeitse. Käytä edellä annettuja vastausten
+palautusosoitteita.</p>
+
+<p>Kysymykset ja vastaukset laitetaan näkyviin
+<a href="#webpage">kisasivustolle</a>.
+Kirjeitse esitettyihin kysymyksiin
+lähetetään myös henkilökohtainen vastaus.</p>
+
+<p>Viimeinen päivä lähettää kysymyksiä on</p>
+
+<dl>
+<dt>sähköpostitse</dt>
+<dd>sunnuntaina&nbsp;13.11.2005</dd>
+
+<dt>kirjeitse</dt>
+<dd>tiistaina&nbsp;8.11.2005</dd>
+</dl>
+
+<p>jotta niihin ehditään vastata vielä
+maanantaina&nbsp;14.11.2005.</p>
+
+<p>Myöhemmin lähetettyihin kysymyksiin järjestäjät eivät
+valitettavasti voi enää luvata vastausta kilpailuajan
+kuluessa.</p>
+<hr>
+Nämä algoritmitehtävät on laatinut
+
+<address>
+<a href="mailto:matti.nykanen@cs.Helsinki.FI">Matti Nykänen</a>
+</address>

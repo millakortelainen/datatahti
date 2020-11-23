@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Datatähti 2002: Loppukilpailu</title>
+<h1>Datatähti 2002: Loppukilpailu</h1>
+
+<h2>Tehtävä 1: Tasaus</h2>
+
+<p>Kaksi taloudestaan tarkkaa kalastajaa suorittaa kalastamista
+yhdessä verkoilla. Päivän päätteeksi he jakavat saamansa kalat.
+Kalastajat ovat hyvin tarkkoja siitä, että kummallekin tulee
+mahdollisimman tarkkaan puolet kalojen arvosta. Kullakin kalalla
+on arvo ja jakamisen yhteydessä mitään kalaa ei voi osittaa, vaan
+jokainen kala päätyy kokonaisuudessaan jommalle kummalle
+kalastajalle. Usealla kalalla voi olla sama arvo. <i>Sinun
+tehtävänäsi on tehdä ohjelma, joka jakaa kalat kahteen ``kasaan''
+siten, että kalakasojen arvot ovat mahdollisimman lähellä
+toisiaan.</i> Kalakasan arvo on kasassa olevien yksittäisten
+kalojen arvojen summa, ja tyhjän kasan arvo on 0.</p>
+
+<p>Anna ohjelmallesi nimi <code>TASAUS</code> (.CPP, .C,
+.PAS).</p>
+
+<h3>Rajoitukset</h3>
+
+<ul>
+  <li>Kaloja on <i>N</i> kappaletta, missä 1 &lt;= <i>N</i> &lt;= 20.</li>
+  <li>Kalojen arvot W1, W2, ..., W<i>N</i> ovat kokonaislukuja väliltä 1 ... 100000 (satatuhatta; pienin mahdollinen arvo on siis 1 ja suurin mahdollinen arvo 100000).</li>
+  <li>Ohjelmasi saa käyttää muistia 10 megatavua.</li>
+  <li>Ohjelmasi saa käyttää 1 sekuntia CPU-aikaa.</li>
+</ul>
+
+<h3>Syöttötiedoston muoto</h3>
+
+<p>Syöttötiedoston <code>TASAUS.IN</code> (huomaa, että tiedoston
+nimi on kokonaan isolla kirjoitettu) ensimmäisellä rivillä on
+kalojen lukumäärä <i>N</i>. Jokaisella seuraavalla <i>N</i>:llä
+rivillä on tasan yksi kokonaisluku. Tiedoston toisella rivillä on
+ensimmäisen kalan arvo W1, kolmannella rivillä on toisen kalan
+arvo W2, neljännellä rivillä kolmannen kalan arvo W3, ..., ja
+tiedoston <i>N</i>+1:llä rivillä on <i>N</i>:nnen kalan arvo
+W<i>N</i>. Kalojen arvojen ei tarvitse olla
+suuruusjärjestyksessä.</p>
+
+<p>Esimerkiksi, jos kaloja on 5 ja niiden arvot ovat 5, 8, 13, 14
+ja 27, voisi tiedoston <code>TASAUS.IN</code> sisältö olla
+seuraava:</p>
+
+<pre>
+5
+8
+5
+13
+27
+14
+</pre>
+
+<h3>Tulostiedoston muoto</h3>
+
+<p>Tulostiedostoon <code>TASAUS.OUT</code> kirjoitetaan yksi
+kokonaisluku, joka on mahdollisimman pieni kalakasojen arvojen
+eroituksen itseisarvo.</p>
+
+<p>Ylläolevassa esimerkissä kalat voitaisiin jakaa kasoihin
+siten, että niiden arvot ovat 5+13+14=32 ja 8+27=35, jolloin
+kalakasojen arvojen eroituksen itseisarvo on abs(32 - 35) = 3.
+Tuolloin tiedostossa <code>TASAUS.OUT</code> tulee olla:</p>
+
+<pre>
+3
+</pre>
+
+<h3>Arvostelu</h3>
+
+<p>Ohjelmaasi testataan useilla testisyötteillä ja jokaisesta voi
+saada 0 ... 10 pistettä. Testien tulokset summataan yhteen.</p>
+
+<p>Jos ohjelmasi ei saa muodostettua tulostiedostoa aikarajan
+puitteissa tai tiedoston ensimmäisellä rivillä on jotain muuta
+kuin yksi kokonaisluku, saa ohjelmasi nolla pistettä kyseisestä
+testistä. Muutoin ohjelmasi saa 0 ... 10 pistettä seuraavien
+periaatteiden mukaan. Oletetaan, että kyseisen ongelman parhaassa
+mahdollisessa ratkaisussa kasojen arvojen erotuksen itseisarvo on
+<i>x</i> ja ohjelmasi tuottaa vastauksena arvon <i>y</i>. Jos
+<i>y &lt; x</i>, saa ohjelmasi nolla pistettä -- eli liian pieni
+luku vie kaikki pisteet. Muussa tapauksessa ohjelmasi saa
+<i>min(0, 10 - (y-x))</i>, eli jokainen ylittävä arvoyksikkö
+vähentää yhden pisteen, mutta nollaa vähempää ei voi saada.</p>
+
+<p>Testitapauksissa on vähintään kolme testiä, joissa <i>N</i>
+&gt;= 15; ja vähintään puolet testitapauksista on sellaisia,
+joissa <i>N</i> &lt;= 10.</p>
+
+<h2>Tehtävä 2: Viivat</h2>
+
+<p>Kuvankäsittelysovelluksen yhteydessä haluttaisiin selvittää,
+miten suorakaiteen muotoiset kuviot sisältyvät toisiinsa. Tässä
+tehtävässä tarkastellaan yksinkertaisuuden vuoksi vain
+<i>viivasegmenttejä ja niiden sisältyvyyttä toisiinsa</i>. Tässä
+tehtävässä kaikkien viivasegmenttien ajatellaan sijaitsevan
+samalla vaakasuoralla viivalla (voit ajatella sen vaikkapa
+X-akseliksi), jolloin niitä voidaan esittää alku- ja loppupisteen
+x-koordinanttiarvoilla. Aina alkupisteen koordinanttiarvo on
+pienempi kuin loppupisteen koordinanttiarvo. Kaikki
+koordinanttiarvot ovat kokonaislukuja väliltä -10000 ... 10000
+(miinus kymmenentuhatta ... kymmenentuhatta).</p>
+
+<p>Ajatellaan, että on kaksi viivasegmenttiä: A ja B. Olkoon
+viivasegmentin A alkupiste a1 ja loppupiste vastaavasti a2
+(jolloin siis a1 &lt; a2). Samoin viivasegmentin B alkupiste on
+b1 ja loppupiste b2 (ja tiedetään, että b1 &lt; b2). Sanotaan,
+että viivasegmentti A on viivasegmentin B <i>sisällä</i>, jos A:n
+alku- ja loppupisteet ovat aidosti B:n alku- ja loppupisteen
+välissä, eli b1 &lt; a1 &lt; a2 &lt; b2.</p>
+
+<p>Tehtävässä ohjelmallesi annetaan <i>N</i> viivasegmenttiä,
+jotka on numeroitu 1 ... <i>N</i>. Sinun pitää määrittää pisin
+sellainen viivasegmenttien ketju, että jokaiselle ketjun
+viivasegmentille (paitsi viimeiselle) pätee, että kyseinen
+viivasegmentti sisältyy ketjun seuraavaan viivasegmenttiin.</p>
+
+<p>Anna ohjelmallesi nimi <code>VIIVAT</code> (.CPP, .C, .PAS).</p>
+
+<h3>Rajoitukset</h3>
+
+<ul>
+  <li>Viivasegmenttejä on <i>N</i> kappaletta, missä 1 &lt;= <i>N</i> &lt;= 500.</li>
+  <li>Kukin viivasegmentti koostuu kahdesta kokonaisluvusta
+  (alku- ja loppupisteen x-koordinanttiarvo). Ensimmäinen luku
+  (alkupiste) on aina pienempi kuin toinen luku (loppupiste).
+  Molemmat luvut ovat väliltä -10000 ... 10000
+  (kymmenentuhatta).</li>
+  <li>Ohjelmasi saa käyttää muistia 10 megatavua.</li>
+  <li>Ohjelmasi saa käyttää 1 sekuntia CPU-aikaa.</li>
+</ul>
+
+<h3>Syöttötiedoston muoto</h3>
+
+<p>Syöttötiedoston <code>VIIVAT.IN</code> (huomaa, että tiedoston
+nimi on kokonaan isolla kirjoitettu) ensimmäisellä rivillä on
+viivasegmenttien lukumäärä <i>N</i>. Jokaisella seuraavalla
+<i>N</i>:llä rivillä on tasan kaksi kokonaisluku yhdellä
+välilyönnillä toisistaan eroitettuna. Tiedoston toisella rivillä
+on ensimmäisen viivasegmentin alku- ja loppupisteet; alkupiste
+ensin ja loppupiste sitten. Vastaavasti kolmannella rivillä on
+toisen viivasegmentin alku- ja loppupisteet, neljännellä rivillä
+kolmannen viivasegmentin alku- ja loppupisteet, ..., ja tiedoston
+<i>N+1</i>:llä rivillä on <i>N</i>:nnen viivasegmentin alku- ja
+loppupisteet. Viivasegmentit eivät ole missään erityisessä
+järjestyksessä.</p>
+
+<p>Esimerkiksi, jos viivasegmenttejä on 4 ja ne ovat [-2..2],
+[-1..1], [-3..4] ja [5..6] voisi tiedoston <code>VIIVAT.IN</code>
+sisältö olla seuraava:</p>
+
+<pre>
+4
+-2 2
+-1 1
+-3 4
+5 6
+</pre>
+
+<h3>Tulostiedoston muoto</h3>
+
+<p>Tulostiedostoon <code>VIIVAT.OUT</code> tulee muodostaa
+ensimmäiselle riville tasan yksi kokonaisluku, joka on pisimmän
+muodostettavissa olevan sisäkkäisten viivasegmenttien ketjun
+pituus. Jos ohjelmasi saa tällaiseksi vastaukseksi luvun
+<i>x</i>, niin seuraavalla rivillä tulee olla kyseisen <i>x</i>:n
+pituisen viivasegmenttiketjun viivasegmenttien numerot
+sisäkkäisyysjärjestyksessä, alkaen sisimmästä ja päätyen siihen
+viivasegmentiin, joka sisältää kaikki edelliset. Viivasegmenttien
+numerot tulee eroittaa toisistaan yhdellä välilyönnillä. Jos
+suurin pituus on saavutettavissa usealla viivasegmenttiketjulla,
+niin riittää tulostaa niistä mikä tahansa.</p>
+
+<p>Ylläolevassa esimerkissä toinen viivasegmentti (eli [-1..1])
+sisältyy ensimmäiseen (eli segmenttiin [-2..2]), joka puolestaan
+sisältyy kolmanteen segmenttiin ([-3..4]). Tuolloin tiedostossa
+<code>VIIVAT.OUT</code> tulee olla:</p>
+
+<pre>
+3
+2 1 3
+</pre>
+
+<p>Huomaa, että tulostiedoston toisella rivillä on ensin sisimmän
+viivasegmentin numero. Viivasegmenttien numerot luetellaan ketjun
+mukaisessa sisäkkäisyysjärjestyksessä ja viimeisenä on ketjun
+viimeisen viivasegmentin numero. Kyseinen segmentti sisältää
+kaikki ketjun edelliset segmentit.</p>
+
+<h3>Arvostelu</h3>
+
+<p>Ohjelmaasi testataan useilla testisyötteillä ja jokaisesta
+ohjelmasi saa joko täydet pisteet tai nolla pistettä. Testien
+tulokset summataan yhteen.</p>
+
+<p>Jos ohjelmasi ei saa muodostettua tulostiedostoa aikarajan
+puitteissa tai tulostiedoston muoto on jotenkin virheellinen, saa
+ohjelmasi nolla pistettä kyseisestä testistä. Jos ohjelmasi saa
+selville maksimaalisen muodostettavissa olevan ketjun pituuden ja
+tiedoston toisella rivillä olevien viivasegmenttien numerot
+muodostavat laillisen sisäkkäisten viivasegmenttien ketjun (joka
+on kyseistä pituutta), saa ohjelmasi täydet pisteet. Muutoin
+ohjelmasi saa nolla pistettä kyseisestä testistä.</p>

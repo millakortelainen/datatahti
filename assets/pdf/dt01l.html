@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<style type="text/css">
+	table {
+		border-collapse: collapse;
+		border: 2px solid black;
+		border-color: #888 #444 #444 #888;
+		margin: 1em;
+	}
+	td {
+		border: 1px solid #888;
+		width: 1.3em;
+		height: 1.3em;
+		padding: 0.2em;
+		text-align: center;
+	}
+</style>
+<title>Datatähti 2001: Loppukilpailu</title>
+<h1>Datatähti 2001: Loppukilpailu</h1>
+
+<h2>Numeroristikko</h2>
+
+<p>Sanomalehdissä on joskus esiintynyt numeroristikoita, jossa
+esiintyy tuntemattomia numeroita edustavia kirjaimia, tunnettuja
+numeroita sekä sarakkeilla ja rivillä olevien numeroiden summia.
+Tällaisesta numeroristikosta pyydetään ratkaisemaan tuntemattomat
+numerot. Kuvassa 1 tuntemattomia numeroita edustavat kirjaimien
+sijaan sumbolit <i>A1, A2, A3, ...</i> (koska erilaisia kirjaimia
+on tavallisessa aakkostossa niin vähän).</p>
+
+<table>
+	<tr>
+		<td><i>A8</i></td>
+		<td><i>A2</i></td>
+		<td><i>A2</i></td>
+		<td>17</td>
+	</tr>
+	<tr>
+		<td><i>A1</i></td>
+		<td><i>A3</i></td>
+		<td><i>A4</i></td>
+		<td>11</td>
+	</tr>
+	<tr>
+		<td><i>A5</i></td>
+		<td>8</td>
+		<td><i>A1</i></td>
+		<td>14</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td><i>A5</i></td>
+		<td><i>A5</i></td>
+		<td>15</td>
+	</tr>
+	<tr>
+		<td><i>A8</i></td>
+		<td><i>A6</i></td>
+		<td><i>A7</i></td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>32</td>
+		<td>21</td>
+		<td></td>
+	</tr>
+</table>
+<p class="caption">Kuva 1. 5 x 3-ristikko, jossa on 8 tuntematonta.</p>
+
+<p>Ristikossa on tuntemattomista ja tunnetuista numeroista
+koostuvia rivejä <i>x</i> kappaletta ja kullakin rivillä on
+yhteenlaskettavia alkioita <i>3</i> kappaletta. Ristikossa
+esiintyy <i>k</i> tuntematonta, joita edustavat symbolit <i>A1,
+A2, A3, ..., Ak</i>. Kukin tuntematon esiintyy ristikossa
+<b>vähintään</b> kerran. Tunnettuja numeroita esiintyy rivi- ja
+sarakesummien lisäksi <i>m</i> kappaletta. Tuntemattomien
+edustamat numerot ovat aina keskenään <b>erisuuria kokonaislukuja
+väliltä <i>1, ..., k</i></b> . Tuntemattomat eivät voi esiintyä
+edustamassa rivillä olevien alkioiden summaa tai vastaavasti
+sarakkeella olevien alkioiden summaa.</p>
+
+<p><b>Tehtävänäsi on tehdä ohjelma, joka määrittää arvot
+tuntemattomille</b>. Jokaisella ohjelmallesi testivaiheessa
+annettavalla tehtävällä on vähintään yksi ratkaisu. Anna
+ohjelmallesi nimi NUMEROT.EXE (käyttöjärjestelmästä
+riippumatta).</p>
+
+<p>Rajoitukset:</p>
+
+<ul>
+	<li>Rivien määrä <i>x</i> on välillä <i>3, ..., 200</i>
+	(esimerkissä <i>x=5</i>).<br>
+	Koska alimpana on sarakkeella olevien lukujen summa, on rivejä
+	kaikkiaan <i>x+1</i> kappaletta.</li>
+
+	<li>Tuntemattomien lukujen määrä <i>k</i> on välillä <i>3, ...
+	100</i> (esimerkissä <i>k=8</i>).<br>
+	Tiedetään, että <i>k &lt;= 3x - m</i>, mutta ei esimerkiksi ole
+	mitään takeita siitä, että <i>k &gt;= x+3</i>.</li>
+
+	<li>Tunnettuja lukuja esiintyy <i>m</i> kappaletta, missä <i>m
+	&gt;= 0</i>. Kukin tunnetuksi ilmoitettu luku on väliltä <i>1,
+	..., k</i> (esimerkissä <i>m=2</i>).</li>
+
+	<li>Kun ilmoitetaan, että on <i>k</i> tuntematonta, niin kaikki
+	edustajat <i>A1, A2, ..., Ak</i> myös esiintyvät
+	ristikossa.</li>
+
+	<li>Ratkaisussa tuntemattomille <i>A1, A2, ..., Ak</i>
+	annettavien arvojen täytyy olla erisuuria lukuja väliltä <i>1,
+	..., k</i> (kaikki kyseiset luvut välttämättä esiintyvät).</li>
+
+	<li>Ohjelmasi saa käyttää 5 sekuntia CPU-aikaa.</li>
+</ul>
+
+<h3>Syöttötiedoston muoto</h3>
+
+<p>Syöttötiedoston NUMEROT.IN ensimmäisellä rivillä ovat numerot
+<i>x</i> ja <i>k</i> (tässä järjestyksessä). Numerot eroitetaan
+toisistaan aina yhdellä blankko-merkillä. Kullakin seuraavasta
+<i>x</i>:stä rivistä on <i>4</i> kokonaislukua. Kunkin rivin
+viimeinen numero on kyseisellä rivillä olevien alkioiden summa.
+Muut numerot edustavat kyseisen rivin alkioita järjestyksessä.
+Huomaa, että rivillä oleva numero '2' voi tarkoittaa lukua
+<i>2</i> tai tuntematonta <i>A2</i> -- se kummasta on kysymys
+kerrotaan myöhemmin tiedostossa.</p>
+
+<p>Alkiorivien jälkeen tulee sarakesummien rivi, joka koostuu
+<i>3</i>:sta kokonaisluvusta -- ensimmäinen vastaa
+vasemmanpuoleisimman (eli ensimmäisen) sarakkeen summaa ja
+viimeinen luku on oikeanpuoleisimman sarakkeen alkioiden
+summa.</p>
+
+<p>Tämän jälkeen tiedostossa tulee rivi, jolla on yksi
+kokonaisluku <i>m</i>, joka on suurempi tai yhtä suuri kuin
+nolla. Lopuksi tulee <i>m</i> riviä, joilla kustakin on 2
+kokonaislukua. Näiden rivien tarkoituksena on kertoa, milloin
+ristikon kohdassa <i>(i,j)</i> oleva kokonaisluku <i>t</i>
+edustaa tuntematonta <i>At</i> ja milloin itse kokonaislukua
+<i>t</i>. Kaikki ristikkoon laitetut alkiot edustavat
+tuntemattomia <i>At</i>-lukuja, paitsi ne, joiden koodinaatit
+luetellaan kyseisellä <i>m</i>:llä rivillä. Kullakin tällaisella
+rivillä oleva ensimmäinen luku tarkoitaa riviä (ja on siten
+välillä <i>1, ..., x</i>) ja toinen luku tarkoittaa saraketta
+(ollen välillä <i>1, ..., 3</i>).</p>
+
+<p>Kaikki tiedostossa olevat luvut ovat ei-negatiivisia
+kokonaislukuja. Kuvan 1 mukainen syöttötiedosto on
+seuraavanlainen:</p>
+<pre>
+5 8
+8 2 2 17
+1 3 4 11
+5 8 1 14
+5 5 5 15
+8 6 7 13
+17 32 21
+2
+3 2
+4 1
+</pre>
+
+<h3>Tulostiedoston muoto</h3>
+
+<p>Tulostiedostoon NUMEROT.OUT kirjoitetaan arvot
+tuntemattomille. Tiedostoon tulee tulostaa yksi rivi, jolla on
+<i>k</i> kokonaislukua eroitettuna toisistaan yhdellä
+blankko-merkillä. Laita rivin loppuun rivin vaihtomerkki.
+Järjestyksessään <i>i</i>:s luku tarkoittaa tuntemattomalle
+<i>Ai</i> ratkaisussa annettavaa arvoa. Tehtävällä on aina
+vähintään yksi ratkaisu -- ohjelmasi saa tulostaa minkätahansa
+kelvollisista ratkaisuista. Esimerkiksi kuvan 1 tapauksessa eräs
+mahdollinen ratkaisu on seuraava.</p>
+<pre>
+1 7 8 2 5 4 6 3
+</pre>
