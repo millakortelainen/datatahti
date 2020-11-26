@@ -200,24 +200,24 @@ a {
 * header
 */
 
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 1500px) {
     .header img {
         max-width: 350px;
-        margin-top: 1rem;
     }
 
     .header{
         height: 35rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding-bottom: 2rem;
     }
 
     .header h1 {
-        font-size: 6rem;
-        line-height: 1em;
-        padding-top: 5rem;
-    }
-
-    .header h2 {
-        line-height: 1em;
+        font-size: 4rem;
+        padding-top: 8rem;
+        
     }
 }
 

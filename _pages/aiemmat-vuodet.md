@@ -2,7 +2,13 @@
 title: Aiemmat vuodet
 layout: page
 ---
+{% capture alkukilpailu2020 %}
+{{ '/assets/pdf/dt00a.pdf'  | relative_url }}
+{% endcapture %}
+
 {% include open-this.html year=2020
+alkukilpailun-tehtavat=alkukilpailu2020
+loppukilpailun-tehtavat=''
 tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
