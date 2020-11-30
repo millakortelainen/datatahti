@@ -360,3 +360,234 @@ loppukilpailun-tehtavat=loppukilpailu2015
 alkukilpailun-tehtavat=alkukilpailu2014
 loppukilpailun-tehtavat=loppukilpailu2014
 %}
+
+{% capture alkukilpailu2013 %}
+{{ '/assets/pdf/dt13a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2013 %}
+{{ '/assets/pdf/dt13l.html'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2013 
+alkukilpailun-tehtavat=alkukilpailu2013
+loppukilpailun-tehtavat=loppukilpailu2013
+%}
+
+{% capture alkukilpailu2012 %}
+{{ '/assets/pdf/dt12a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2012 %}
+{{ '/assets/pdf/dt12l.html'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2012 
+alkukilpailun-tehtavat=alkukilpailu2012
+loppukilpailun-tehtavat=loppukilpailu2012
+%}
+
+{% capture alkukilpailu2011 %}
+{{ '/assets/pdf/dt11a.html'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2011 %}
+{{ '/assets/pdf/dt11l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2011 
+alkukilpailun-tehtavat=alkukilpailu2011
+loppukilpailun-tehtavat=loppukilpailu2011
+%}
+
+{% capture alkukilpailu2010 %}
+{{ '/assets/pdf/dt10a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2010 %}
+{{ '/assets/pdf/dt10l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2010 
+alkukilpailun-tehtavat=alkukilpailu2010
+loppukilpailun-tehtavat=loppukilpailu2010
+%}
+
+{% capture alkukilpailu2009 %}
+{{ '/assets/pdf/dt09a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2009 %}
+{{ '/assets/pdf/dt09l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2009 
+alkukilpailun-tehtavat=alkukilpailu2009
+loppukilpailun-tehtavat=loppukilpailu2009
+%}
+
+{% capture alkukilpailu2008 %}
+{{ '/assets/pdf/dt08a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2008 %}
+{{ '/assets/pdf/dt08l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2008 
+alkukilpailun-tehtavat=alkukilpailu2008
+loppukilpailun-tehtavat=loppukilpailu2008
+%}
+
+{% capture alkukilpailu2007 %}
+{{ '/assets/pdf/dt07a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2007 %}
+{{ '/assets/pdf/dt07l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2007 
+alkukilpailun-tehtavat=alkukilpailu2007
+loppukilpailun-tehtavat=loppukilpailu2007
+%}
+
+{% capture alkukilpailu2006 %}
+{{ '/assets/pdf/dt06a.html'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2006 %}
+{{ '/assets/pdf/dt06l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2006 
+alkukilpailun-tehtavat=alkukilpailu2006
+loppukilpailun-tehtavat=loppukilpailu2006
+%}
+
+{% capture alkukilpailu2005 %}
+{{ '/assets/pdf/dt05a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2005 %}
+{{ '/assets/pdf/dt05l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2005 
+alkukilpailun-tehtavat=alkukilpailu2005
+loppukilpailun-tehtavat=loppukilpailu2005
+%}
+
+
+{% capture alkukilpailu2004 %}
+{{ '/assets/pdf/dt04a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2004 %}
+{{ '/assets/pdf/dt04l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2004 
+alkukilpailun-tehtavat=alkukilpailu2004
+loppukilpailun-tehtavat=loppukilpailu2004
+%}
+
+
+{% capture alkukilpailu2003 %}
+{{ '/assets/pdf/dt03a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2003 %}
+{{ '/assets/pdf/dt03l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2003 
+alkukilpailun-tehtavat=alkukilpailu2003
+loppukilpailun-tehtavat=loppukilpailu2003
+%}
+
+
+{% capture alkukilpailu2002 %}
+{{ '/assets/pdf/dt02a.html'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2002 %}
+{{ '/assets/pdf/dt02l.html'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2002 
+alkukilpailun-tehtavat=alkukilpailu2002
+loppukilpailun-tehtavat=loppukilpailu2002
+%}
+
+
+{% capture alkukilpailu2001 %}
+{{ '/assets/pdf/dt01a.html'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2001 %}
+{{ '/assets/pdf/dt01l.html'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2001 
+alkukilpailun-tehtavat=alkukilpailu2001
+loppukilpailun-tehtavat=loppukilpailu2001
+%}
+
+
+{% capture alkukilpailu2000 %}
+{{ '/assets/pdf/dt00a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2000 %}
+{{ '/assets/pdf/dt00l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2000 
+alkukilpailun-tehtavat=alkukilpailu2000
+loppukilpailun-tehtavat=loppukilpailu2000
+%}
+
+
+{% capture alkukilpailu1999 %}
+{{ '/assets/pdf/dt99a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu1999 %}
+{{ '/assets/pdf/dt99l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=1999 
+alkukilpailun-tehtavat=alkukilpailu1999
+loppukilpailun-tehtavat=loppukilpailu1999
+%}
+
+
+{% capture alkukilpailu1998 %}
+{{ '/assets/pdf/dt98a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu1998 %}
+{{ '/assets/pdf/dt98l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=1998 
+alkukilpailun-tehtavat=alkukilpailu1998
+loppukilpailun-tehtavat=loppukilpailu1998
+%}
