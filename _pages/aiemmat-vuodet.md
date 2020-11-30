@@ -3,12 +3,16 @@ title: Aiemmat vuodet
 layout: page
 ---
 {% capture alkukilpailu2020 %}
-{{ '/assets/pdf/dt00a.pdf'  | relative_url }}
+{{ '/assets/pdf/dt20a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2020 %}
+{{ '/assets/pdf/dt20l.pdf'  | relative_url }}
 {% endcapture %}
 
 {% include open-this.html year=2020
 alkukilpailun-tehtavat=alkukilpailu2020
-loppukilpailun-tehtavat=''
+loppukilpailun-tehtavat=loppukilpailu2020
 tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
@@ -64,7 +68,18 @@ tulokset='<h3>Alkukilpailu</h3>
 </table>'
 %}
 
+{% capture alkukilpailu2019 %}
+{{ '/assets/pdf/dt19a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2019 %}
+{{ '/assets/pdf/dt19l.pdf'  | relative_url }}
+{% endcapture %}
+
+
 {% include open-this.html year=2019 
+alkukilpailun-tehtavat=alkukilpailu2019
+loppukilpailun-tehtavat=loppukilpailu2019
 tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
@@ -114,7 +129,20 @@ tulokset='<h3>Alkukilpailu</h3>
 </table>'
 %}
 
+
+{% capture alkukilpailu2018 %}
+{{ '/assets/pdf/dt19l.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2018 %}
+{{ '/assets/pdf/dt19l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+
 {% include open-this.html year=2018
+alkukilpailun-tehtavat=alkukilpailu2018
+loppukilpailun-tehtavat=loppukilpailu2018
 tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
@@ -183,7 +211,19 @@ tulokset='<h3>Alkukilpailu</h3>
 </table>'
 %}
 
+
+{% capture alkukilpailu2017 %}
+{{ '/assets/pdf/dt17a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2017 %}
+{{ '/assets/pdf/dt17l.pdf'  | relative_url }}
+{% endcapture %}
+
+
 {% include open-this.html year=2017
+alkukilpailun-tehtavat=alkukilpailu2017
+loppukilpailun-tehtavat=loppukilpailu2017
 tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
@@ -233,7 +273,17 @@ tulokset='<h3>Alkukilpailu</h3>
 </table>'
 %}
 
+{% capture alkukilpailu2016 %}
+{{ '/assets/pdf/dt16l.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2016 %}
+{{ '/assets/pdf/dt16l.pdf'  | relative_url }}
+{% endcapture %}
+
 {% include open-this.html year=2016
+alkukilpailun-tehtavat=alkukilpailu2016
+loppukilpailun-tehtavat=loppukilpailu2016
 tulokset='<h3>Alkukilpailu</h3>
 
 <table><tr><th width=50 align=left>sija</th><th width=225 align=left>nimi</th><th width=325 align=left>koulu</th><th width=100 align=left>pisteet</th></tr>
@@ -283,3 +333,30 @@ tulokset='<h3>Alkukilpailu</h3>
 </table>'
 %}
 
+{% capture alkukilpailu2015 %}
+{{ '/assets/pdf/dt15a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2015 %}
+{{ '/assets/pdf/dt15l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2015 
+alkukilpailun-tehtavat=alkukilpailu2015
+loppukilpailun-tehtavat=loppukilpailu2015
+%}
+
+{% capture alkukilpailu2014 %}
+{{ '/assets/pdf/dt14a.pdf'  | relative_url }}
+{% endcapture %}
+
+{% capture loppukilpailu2014 %}
+{{ '/assets/pdf/dt14l.pdf'  | relative_url }}
+{% endcapture %}
+
+
+{% include open-this.html year=2014 
+alkukilpailun-tehtavat=alkukilpailu2014
+loppukilpailun-tehtavat=loppukilpailu2014
+%}
