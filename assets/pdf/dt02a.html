@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Datatähti 2002: Alkukilpailu</title>
+<h1>Datatähti 2002: Alkukilpailu</h1>
+
+<h2>Tehtävä 1: Alueen pinta-ala</h2>
+<p>Vuoden 2002 alkukilpailun ensimmäisessä ohjelmointitehtävässä pitää tehdä ohjelma, jonka avulla voidaan laskea ääriviivojen rajaaman alueen pinta-ala.</p>
+
+<h3>1. Yleiskuvaus</h3>
+<p>Ajatellaan, että periaatteessa ääretön alue on jaettu pieniin ruutuihin. Alueen ääriviiva voidaan muodostaa lähtemällä liikkeelle jostakin ruudusta ja kertomalla, miten ääriviiva etenee ruudusta toiseen, kunnes se lopulta palaa takaisin lähtöruutuun.</p>
+
+<p>Jokaisella ruudulla on ruudukossa 8 naapuria. Ääriviiva voi edetä mihin tahansa näistä kahdeksasta naapurista. Tässä tehtävässä <b>ääriviiva ei voi kulkea itsensä yli</b> . Lisäksi jokaiselle ääriviivan ruudulle taataan, että kunkin ruudun ympärillä olevasta kahdeksasta ruudusta tasan kaksi muuta ruutua kuuluu ääriviivaan.</p>
+
+<p>Tehtävänäsi on laskea ääriviivan rajaaman alueen pinta-ala. Ääriviivan ruudut kuuluvat itse alueeseen.</p>
+
+<h3>2. Rajoitukset</h3>
+<p>Lähtöpisteestä ääriviiva voi edetä pohjois-etelä suunnassa enintään 200 ruudun etäisyydelle. Vastaavasti itä-länsi suunnassa ääriviiva voi edetä enintään 200 ruudun etäisyydelle.</p>
+<p>Ääriviivassa on <b>N</b> ruutua, missä 6 &lt;= N &lt;= 4000.</p>
+
+<h3>3. Syötteet</h3>
+<p>Ohjelmasi tulee lukea syötteensä oletushakemiston tekstitiedostosta <code>AREA.IN</code>. Tiedoston sisältö on seuraava:</p>
+
+<ul>
+	<li>Ensimmäisellä rivillä on ääriviivan pisteiden lukumäärä <b>N</b>.</li>
+
+	<li>Seuraavalla <b>N</b>:llä rivillä on kullakin yksi kokonaisluku. Kyseiset kokonaisluvut ilmaisevat, mihin suuntaan viiva seuraavaksi etenee. Mahdollisia arvoja on 8: luvut 1, 2, 3, 4, 5, 6, 7 tai 8. Luku 1 tarkoittaa suuntaa "ylös / pohjoiseen" ja muut luvut saadaan kiertämällä myötäpäivään ruudun ympäri alla olevan kuvan mukaisesti. Siis esimerkiksi 2 tarkoittaa "ylös-ja-oikealle / koiliseen" ja 3 tarkoittaa "oikealle / itään".</li>
+</ul>
+
+<p><img src="dt02a1_suunnat.gif" alt="" /></p>
+
+<p><b>Huomaa</b>, että lähtöpistettä ei mitenkään erityisesti määritellä (voit olettaa sen origoksi). Ääriviivan kiertosuunta voi olla kumpi tahansa.</p>
+
+<h3>4. Tulosteet</h3>
+<p>Ohjelmasi tulosteena tulee olla oletushakemistossa tekstitiedosto <code>AREA.OUT</code>. Tiedostossa tulee olla vain yksi rivi, jolla on yksi kokonaisluku -- ääriviivan rajaaman alueen koko.</p>
+
+<h3>5. Esimerkki syötteestä ja oikeasta tuloksesta</h3>
+<p>Jos tiedostossa <code>AREA.IN</code> on</p>
+<pre>
+6
+3
+4
+6
+7
+8
+2
+</pre>
+<p>jolloin tulos on <code>AREA.OUT</code>:</p>
+<pre>
+8
+</pre>
+
+<p>itse alue näyttää tuolloin seuraavalta:</p>
+<pre>
+  xx
+ x  x
+  xx
+</pre>
+
+<p>Toinen esimerkki, <code>AREA.IN</code>:</p>
+<pre>
+14
+7
+7
+6
+8
+1
+2
+2
+1
+2
+4
+4
+4
+6
+6
+</pre>
+<p>jolloin tulos on <code>AREA.OUT</code>:</p>
+<pre>
+26
+</pre>
+<p>itse alue näyttää tuolloin seuraavalta:</p>
+<pre>
+   x
+  x x
+  x  x
+ x    x
+x    x
+x xxx
+ x
+</pre>
+
+<h3>Ratkaisun palautus ja arvostelu</h3>
+<p>Tehtävän ratkaisuna sinun pitää palauttaa asianmukaisesti kommentoitu <b>lähdekielinen</b> ohjelma. Sallittuja ohjelmointikieliä ovat Pascal, C ja C++. Laita ohjelmasi alkuun kommentiksi yhteystietosi ja mahdolliset ohjeet ohjelman kääntämistä varten. Ohjelmalla pitää olla vain edellä määritellyt syötteet ja tulosteet. Erityisesti sen ei pidä lukea mitään näppäimistöltä tai tulostaa mitään näyttöruudulle.</p>
+
+<p>Arvosteluvaiheessa ohjelmasi käännetään (Unix-ympäristössä) ja suoritetaan useilla erilaisilla testisyötteillä. Pisteitä saa käännetyn ohjelman oikeasta ja nopeasta toiminnasta joukolla testisyötteitä. Lähdekielistä ohjelmaa ei siis arvostella, kunhan vain sen käännös onnistuu. Siirrettävyysongelmien välttämiseksi pitäydy kielen peruspiirteissä.</p>
+
+<p>Testausympäristössä on kääntäjinä käytettävissä ainakin GNU C/C++ ja Pascal sekä Free Pascal (jonka pitäisi olla Turbo Pascal -yhteensopiva). Käännökset tehdään kääntäjien oletusarvoisilla optioilla. Jos käytät ohjelmien tekemiseen Turbo Pascal:a tai C++:aa, kerro se palauttaessasi ohjelmaa. Jos käytettävissä olevista kielen piirteistä tms. on epäselvyyttä, kysy asiasta <a href="mailto:Ville.Leppanen@cs.utu.fi">sähköpostitse</a>. Seuraa myös sivua <a href="http://www2.cs.utu.fi/datatahti/DTalku/tiedoituksia.htm">http://www2.cs.utu.fi/datatahti/DTalku/tiedoituksia.htm</a>, jolle tarpeen mukaan tulee tiedoituksia koskien tehtäviä.</p>
+
+<p>Testisyötteistä osa testaa vain ohjelman oikeellisuutta. Kustakin tällaisesta syötteestä saa tietyn määrän pisteitä, jos ohjelma tuottaa oikean tulosteen kohtuullisessa ajassa. Syötteiden koot ja aikarajat valitaan siten, että hitaallakin ohjelmalla saa pisteitä, kunhan se on muuten toimiva. Osa testisyötteistä testaa ohjelman tehokkuutta. Näillä syötteillä ohjelman saama pistemäärä vähenee sitä mukaa, kun suoritusaika kasvaa. Testisyötteet ovat aina tarkalleen ylläolevan kuvauksen mukaisia. Pisteytyksen yksityiskohtia ja tarkkoja aikarajoja ei tässä vaiheessa julkisteta. Vertailukohdaksi voidaan kuitenkin antaa, että tehtävän laatijan ratkaisu vaatii alle 500 kilotavua muistia ja vie suurimmilla testisyötteillä alle yhden sekunnin suoritusaikaa (GNU C, Linux, 667 MHz Pentium III).</p>
+
+<p>Palauta ratkaisusi mieluiten sähköpostiviestinä osoitteeseen <a href="mailto:Ville.Leppanen@cs.utu.fi">Ville.Leppanen@cs.utu.fi</a>. Älä käytä yli 80 merkin rivejä! Voit myös toimittaa ratkaisusi 3,5 tuuman DOS-formatoidulla levykkeellä osoitteeseen</p>
+
+<div style="margin-left: 6em; white-space: pre-line;">
+	Ville Leppänen
+	Turun yliopisto
+	Tietojenkäsittelyoppi
+	Lemminkäisenkatu 14A, Datacity
+	20520 Turku
+</div>
+
+<p>Pakkaa levyke huolellisesti ja laita mielellään toinen samansisältöinen mukaan varmuuskopioksi. Talleta ohjelmasi juurihakemistoon nimellä dt2002a.pas, dt2002a.c tai dt2002a.cpp.</p>
+
+<h2>Tehtävä 2: Postimerkit</h2>
+<p>Alkukilpailun toisessa ohjelmointitehtävässä pitää tehdä ohjelma, jonka avulla selvitetään, miten monta peräkkäistä numeroa voidaan muodostaa annettujen numeroiden summana.
+
+<h3>1. Yleiskuvaus</h3>
+<p>Käytettävissä on <b>N</b> erilaista postimerkkityyppiä, joita kutakin on periaatteessa ääretön määrä. Postimerkkityyppeihin liittyvät arvot ovat keskenään erisuuria. Merkkityyppien joukossa on yksi, jonka arvo on 1. Tehtävänäsi on selvittää, miten monta peräkkäistä kokonaislukuarvoa -- alkaen arvosta 1 -- voit muodostaa valittujen postimerkkien arvojen summana valitsemalla enintään <b>M</b> postimerkkiä kutakin muodostettavaa arvoa varten.
+
+<p>Esimerkiksi, olkoon N=2 ja kyseisiin postimerkkityyppeihin liittyvät arvot 1 ja 4. Jos M=3, niin voidaan muodostaa arvot 1=1, 2=1+1, 3=1+1+1, 4=4, 5=4+1 ja 6=4+1+1, joten tehtävän vastaus tässä tapauksessa olisi 6.</p>
+
+<h3>2. Rajoitukset</h3>
+
+<ul>
+	<li>Erilaisten postimerkkityyppien lukumäärä 1 &lt;= N &lt;= 30.</li>
+	<li>Valittavien postimerkkien maksimimäärä 1 &lt;= M &lt;= 30.</li>
+	<li>Kuhunkin postimerkkityyppiin liittyvä arvo on kokonaisluku väliltä 1, ..., 100000 (satatuhatta).</li>
+</ul>
+
+<h3>3. Syötteet</h3>
+<p>Ohjelmasi tulee lukea syötteensä oletushakemiston tekstitiedostosta <code>STAMPS.IN</code>. Tiedoston sisältö on seuraava:
+
+<ul>
+	<li>Ensimmäisellä rivillä on yhdellä välilyönnillä erotetut kaksi kokonaislukua <b>N</b> ja <b>M</b>.</li>
+
+	<li>Toisella rivillä on <b>N</b> keskenään erisuurta kokonaislukua yhdellä välilyönnillä toisistaan eroitettuna. Nämä luvut ovat eri postimerkkityyppien arvot.</li>
+</ul>
+
+<h3>4. Tulosteet</h3>
+<p>Ohjelmasi tulosteena tulee olla oletushakemistossa tekstitiedosto <code>STAMPS.OUT</code>. Ohjelmasi tulee kirjoittaa tiedostoon yksi rivi, jossa on yksi kokonaisluku. Kyseinen kokonaisluku on tehtävässä kysytty peräkkäisten kokonaislukuarvojen maksimimäärä, joka voidaan muodostaan käyttämällä enintään M postimerkkiä kutakin arvoa kohti.
+
+<h3>5. Esimerkki syötteestä ja oikeasta tuloksesta</h3>
+<p>Jos tiedostossa <code>STAMPS.IN</code> on</p>
+<pre>
+2 3
+1 4
+</pre>
+<p>on oikea tulostiedoston <code>STAMPS.OUT</code> sisältö:</p>
+<pre>
+6
+</pre>
+
+<p>Toinen esimerkki: Jos tiedostossa <code>STAMPS.IN</code> on</p>
+<pre>
+4 5
+1 12 4 21
+</pre>
+<p>on oikea tulostiedoston <code>STAMPS.OUT</code> sisältö:</p>
+<pre>
+71
+</pre>
+
+<h3>Ratkaisun palautus ja arvostelu</h3>
+<p>Tehtävän ratkaisuna sinun pitää palauttaa asianmukaisesti kommentoitu <b>lähdekielinen</b> ohjelma. Sallittuja ohjelmointikieliä ovat Pascal, C ja C++. Laita ohjelmasi alkuun kommentiksi yhteystietosi ja mahdolliset ohjeet ohjelman kääntämistä varten. Ohjelmalla pitää olla vain edellä määritellyt syötteet ja tulosteet. Erityisesti sen ei pidä lukea mitään näppäimistöltä tai tulostaa mitään näyttöruudulle.
+
+<p>Arvosteluvaiheessa ohjelmasi käännetään (Unix-ympäristössä) ja suoritetaan useilla erilaisilla testisyötteillä. Pisteitä saa käännetyn ohjelman oikeasta ja nopeasta toiminnasta joukolla testisyötteitä. Lähdekielistä ohjelmaa ei siis arvostella, kunhan vain sen käännös onnistuu. Siirrettävyysongelmien välttämiseksi pitäydy kielen peruspiirteissä.</p>
+
+<p>Testausympäristössä on kääntäjinä käytettävissä ainakin GNU C/C++ ja Pascal sekä Free Pascal (jonka pitäisi olla Turbo Pascal -yhteensopiva). Käännökset tehdään kääntäjien oletusarvoisilla optioilla. Jos käytät ohjelmien tekemiseen Turbo Pascal:a tai C++:aa, kerro se palauttaessasi ohjelmaa. Jos käytettävissä olevista kielen piirteistä tms. on epäselvyyttä, kysy asiasta <a href="mailto:Ville.Leppanen@cs.utu.fi">sähköpostitse</a>. Seuraa myös sivua <a href="http://www2.cs.utu.fi/datatahti/DTalku/tiedoituksia.htm">http://www2.cs.utu.fi/datatahti/DTalku/tiedoituksia.htm</a>, jolle tarpeen mukaan tulee tiedoituksia koskien tehtäviä.</p>
+
+<p>Testisyötteistä osa testaa vain ohjelman oikeellisuutta. Kustakin tällaisesta syötteestä saa tietyn määrän pisteitä, jos ohjelma tuottaa oikean tulosteen kohtuullisessa ajassa. Syötteiden koot ja aikarajat valitaan siten, että hitaallakin ohjelmalla saa pisteitä, kunhan se on muuten toimiva. Osa testisyötteistä testaa ohjelman tehokkuutta. Näillä syötteillä ohjelman saama pistemäärä vähenee sitä mukaa, kun suoritusaika kasvaa. Testisyötteet ovat aina tarkalleen ylläolevan kuvauksen mukaisia. Pisteytyksen yksityiskohtia ja tarkkoja aikarajoja ei tässä vaiheessa julkisteta. Ohjelmallesi tullaan antamaan suoritusaikaa testitapauksesta riippuen 0.1 sekuntia - 10 sekuntia (Linux, 667 MHz Pentium III).</p>
+
+<p>Palauta ratkaisusi mieluiten sähköpostiviestinä osoitteeseen <a href="mailto:Ville.Leppanen@cs.utu.fi">Ville.Leppanen@cs.utu.fi</a>. Älä käytä yli 80 merkin rivejä! Voit myös toimittaa ratkaisusi 3,5 tuuman DOS-formatoidulla levykkeellä osoitteeseen</p>
+
+<div style="margin-left: 6em; white-space: pre-line;">
+	Ville Leppänen
+	Turun yliopisto
+	Tietojenkäsittelyoppi
+	Lemminkäisenkatu 14A, Datacity
+	20520 Turku
+</div>
+
+<p>Pakkaa levyke huolellisesti ja laita mielellään toinen samansisältöinen mukaan varmuuskopioksi. Talleta ohjelmasi juurihakemistoon nimellä dt2002b.pas, dt2002b.c tai dt2002b.cpp.</p>
+
+<h2>Tehtävä 3: Ajojärjestelyt</h2>
+<p>Kolmannessa tehtävässä tehtävänäsi on auttaa kuljetusliikkeen ajojärjestelijää. Sinun pitää määrittää mahdollisimman hyvä tavaroiden kuljetusjärjestys, jotta kuljettamiseen käytettävä kokonaisaika olisi mahdollisimman pieni.
+
+<h3>1. Yleiskuvaus</h3>
+<p>Kuljetusliikkeellä on <b>N</b> kontillista tavaraa, jotka sen pitää saada toimitettua kohteisiin mahdollisimman nopeasti. Liikkeellä on käytössään <b>M</b> autoa kuormakonttien toimittamiseen. Autot ovat samanlaisia. Kukin auto voi kuljettaa kerrallaan vain yhtä konttia. Kontit pitää toimittaa niiden oikeisiin kohteisiin ja jokaiseen konttiin liittyy kuljetusaika, joka määräytyy suoraan kuljetusliikkeen ja kohteen välisen etäisyyden perusteella. Kuljetusajan ajatellaan muodostuvan siitä ajasta, jonka auto tarvitsee ajaakseen kohteeseen ja takaisin kuljetusliikkeeseen.
+
+<p>Tehtävänäsi on järjestellä konttien kuljetus niin, että kaikki tavarat saadaan kuljetettua kohteisiinsa ja kaikki autot ovat mahdollisimman pian takaisin kuljetusliikkeessä. Erityisesti sinun pitää määrittää, mitkä kontit kukin auto kuljettaa. Huomaa, että ei ole väliä, missä järjestyksessä auto kuljettaa sille määrätyt kontit. Auton ajatellaan kuljettavan sille määrätyt kontit ilman taukoja.</p>
+
+<h3>2. Rajoitukset</h3>
+
+<ul>
+	<li>Kuormakonttien lukumäärä 1 &lt;= N &lt;= 500.</li>
+	<li>Autojen lukumäärä 1 &lt;= M &lt;= 100.</li>
+	<li>Kuhunkin konttiin liittyvä kuljetusaika on kokonaisluku väliltä 1, ..., 100. Kuljetusaika tarkoittaa aikaa, joka kuluu autolta kontin viemiseen kohteeseen ja ajamiseen takaisin kuljetusliikkeeseen.</li>
+</ul>
+
+<h3>3. Syötteet</h3>
+<p>Ohjelmasi tulee lukea syötteensä oletushakemiston tekstitiedostosta <code>LOADS.IN</code>. Tiedoston sisältö on seuraava:
+
+<ul>
+	<li>Ensimmäisellä rivillä on yhdellä välilyönnillä erotetut kaksi kokonaislukua <i>N</i> ja <i>M</i>.</li>
+	<li>Toisella rivillä on <i>N</i> positiivista kokonaislukua yhdellä välilyönnillä toisistaan eroitettuna. Nämä luvut ovat eri kontteihin liittyvät kuljetusajat. Ensimmäinen luku on ensimmäisen kontin kuljetusaika, toinen luku toisen kontin kuljetusaika, jne.</li>
+</ul>
+
+<h3>4. Tulosteet</h3>
+<p>Ohjelmasi tulosteena tulee olla oletushakemistossa tekstitiedosto <code>LOADS.OUT</code>. Ohjelmasi tulee kirjoittaa tiedostoon <b>M+1</b> riviä, joissa kussakin on yksi tai useampi kokonaisluku, yhdellä välilyönnillä toisistaan eroitettuina. Ensimmäisellä rivillä on yksi kokonaisluku, joka kertoo kuljetukseen kuluvan kokonaisajan. Seuraavat <b>M</b> riviä kuvaavat kunkin auton kuljetettavaksi määrätyt kontit. Tiedoston toinen rivi kuvaa ensimmäisen auto kuljettamat kontit, kolmas rivi toisen auton kuljettamat kontit, jne. Kunkin auton kohdalla rivin ensimmäinen luku ilmoittaa, montako konttia kyseinen auto kuljettaa. (Tämä luku on siis kokonaisluku väliltä 0, ... <b>N</b>.) Seuraavaksi rivillä luetellaan ne kontit, jotka kyseinen auto kuljettaa.
+
+<p>Esimerkiksi tiedoston sisältö voisi olla</p>
+<pre>
+11
+3 1 7 6
+2 2 5
+2 3 4
+</pre>mikä tarkoittaa, että kuljettamiseen kuluva kokonaisaika on 11. Ensimmäinen auto kuljettaa kolme konttia: kontit 1, 7 ja 6. Toinen auto kuljettaa kaksi konttia: kontit 2 ja 5. Kolmas auto kuljettaa myös kaksi konttia: kontit 3 ja 4. (Kokonaisaika 11 toteutuu, jos konttien 1 - 7 kuljetusajat ovat 5, 5, 4, 4, 3, 3 ja 3.)
+
+<p><b>Huomaa</b>, että kunkin kontin numeron täytyy esiintyä tasan kerran tiedostossa. Kullekin autolle kuljetettavaksi määrättyjen konttien järjestyksellä ei ole väliä.</p>
+
+<p><b>Huomaa</b>, että ongelmalla on useita optimaalisia ratkaisuja. Ohjelmasi ei edes tarvitse löytää optimaalista ratkaisua saadakseen pisteitä. Pisteitä annetaan ratkaisun hyvyyden perusteella.</p>
+
+<h3>5. Esimerkki syötteestä ja oikeasta tuloksesta</h3>
+<p>Jos tiedostossa <code>LOADS.IN</code> on</p>
+<pre>
+7 3
+5 5 4 4 3 3 3
+</pre>
+<p>on optimaalisen ratkaisun määrittelevän tulostiedoston <code>LOADS.OUT</code> sisältö esimerkiksi:</p>
+<pre>
+9
+2 1 3
+2 2 4
+3 5 6 7
+</pre>
+
+<h3>Ratkaisun palautus ja arvostelu</h3>
+<p>Tehtävän ratkaisuna sinun pitää palauttaa asianmukaisesti kommentoitu <b>lähdekielinen</b> ohjelma. Sallittuja ohjelmointikieliä ovat Pascal, C ja C++. Laita ohjelmasi alkuun kommentiksi yhteystietosi ja mahdolliset ohjeet ohjelman kääntämistä varten. Ohjelmalla pitää olla vain edellä määritellyt syötteet ja tulosteet. Erityisesti sen ei pidä lukea mitään näppäimistöltä tai tulostaa mitään näyttöruudulle.
+
+<p>Arvosteluvaiheessa ohjelmasi käännetään (Unix-ympäristössä) ja suoritetaan useilla erilaisilla testisyötteillä. Pisteitä saa käännetyn ohjelman oikeasta ja nopeasta toiminnasta joukolla testisyötteitä. Lähdekielistä ohjelmaa ei siis arvostella, kunhan vain sen käännös onnistuu. Siirrettävyysongelmien välttämiseksi pitäydy kielen peruspiirteissä.</p>
+
+<p>Testausympäristössä on kääntäjinä käytettävissä ainakin GNU C/C++ ja Pascal sekä Free Pascal (jonka pitäisi olla Turbo Pascal -yhteensopiva). Käännökset tehdään kääntäjien oletusarvoisilla optioilla. Jos käytät ohjelmien tekemiseen Turbo Pascal:a tai C++:aa, kerro se palauttaessasi ohjelmaa. Jos käytettävissä olevista kielen piirteistä tms. on epäselvyyttä, kysy asiasta <a href="mailto:Ville.Leppanen@cs.utu.fi">sähköpostitse</a>. Seuraa myös sivua <a href="http://www2.cs.utu.fi/datatahti/DTalku/tiedoituksia.htm">http://www2.cs.utu.fi/datatahti/DTalku/tiedoituksia.htm</a>, jolle tarpeen mukaan tulee tiedoituksia koskien tehtäviä.</p>
+
+<p>Testisyötteistä osa testaa vain ohjelman oikeellisuutta. Kustakin tällaisesta syötteestä saa tietyn määrän pisteitä, jos ohjelma tuottaa oikean tulosteen annetussa ajassa. Syötteiden koot valitaan siten, että hitaallakin ratkaisumenetelmällä saa pisteitä, kunhan se on muuten toimiva. Osa testisyötteistä testaa ohjelman tehokkuutta. Näillä syötteillä ohjelman saama pistemäärä vähenee sitä mukaa, kun suoritusaika kasvaa. Testisyötteet ovat aina tarkalleen ylläolevan kuvauksen mukaisia. Pisteytyksen yksityiskohtia ei tässä vaiheessa julkisteta, mutta ohjelmasi saa pisteitä sen mukaan, mitä paremman ratkaisun se löytää. Ohjelmallesi tullaan antamaan suoritusaikaa 5 sekuntia testitapausta kohti (Linux, 667 MHz Pentium III).</p>
+
+<p>Palauta ratkaisusi mieluiten sähköpostiviestinä osoitteeseen <a href="mailto:Ville.Leppanen@cs.utu.fi">Ville.Leppanen@cs.utu.fi</a>. älä käytä yli 80 merkin rivejä! Voit myös toimittaa ratkaisusi 3,5 tuuman DOS-formatoidulla levykkeellä osoitteeseen</p>
+
+<div style="margin-left: 6em; white-space: pre-line;">
+	Ville Leppänen
+	Turun yliopisto
+	Tietojenkäsittelyoppi
+	Lemminkäisenkatu 14A, Datacity
+	20520 Turku
+</div>
+
+<p>Pakkaa levyke huolellisesti ja laita mielellään toinen samansisältöinen mukaan varmuuskopioksi. Talleta ohjelmasi juurihakemistoon nimellä dt2002c.pas, dt2002c.c tai dt2002c.cpp.</p>

@@ -21,8 +21,6 @@ window.onload = () => {
 };
 
 function test(param) {
-  console.log(param)
-
   if (param.lastElementChild.style.display === "none") {
     param.lastElementChild.style.display = "inherit"
   } else {

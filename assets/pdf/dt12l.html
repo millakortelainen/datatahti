@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<style>
+	table {
+		border: 0;
+	}
+	table.neliointi {
+		border-collapse: separate;
+		margin: 1em;
+		border: 1px solid #888;
+		border-color: #888 #444 #444 #888;
+	}
+	table.neliointi td {
+		width: 1em;
+		height: 1em;
+		border: 1px solid #888;
+		border-color: #888 #444 #444 #888;
+	}
+	.blue { background: blue; }
+	.yellow { background: yellow; }
+	.green { background: green; }
+	.red { background: red; }
+</style>
+<title>Datatähti 2012: Loppukilpailu</title>
+<h1>Datatähti 2012: Loppukilpailu</h1>
+
+<hr>
+
+<h2>Tehtävänanto</h2>
+<p>Neliön <i>neliöinti</i> tarkoittaa sen jakamista pienemmiksi neliöksi.
+Pienten neliöiden täytyy peittää kokonaan alkuperäinen neliö,
+ja ne eivät saa osua toistensa päälle. Kaikkien neliöiden koot ovat
+kokonaislukuja.</p>
+
+<p>Seuraavassa on kaksi tapaa neliöidä 8x8-neliö:</p>
+
+<table width="500">
+<tr><td>
+
+<table class="neliointi">
+<tr><td class="blue"></td><td class="blue"></td><td class="blue"></td><td class="red"></td><td class="red"></td><td class="green"></td><td class="blue"></td><td class="blue"></td></tr><tr><td class="blue"></td><td class="blue"></td><td class="blue"></td><td class="red"></td><td class="red"></td><td class="yellow"></td><td class="blue"></td><td class="blue"></td></tr><tr><td class="blue"></td><td class="blue"></td><td class="blue"></td><td class="green"></td><td class="green"></td><td class="green"></td><td class="green"></td><td class="red"></td></tr><tr><td class="red"></td><td class="yellow"></td><td class="yellow"></td><td class="green"></td><td class="green"></td><td class="green"></td><td class="green"></td><td class="yellow"></td></tr><tr><td class="green"></td><td class="yellow"></td><td class="yellow"></td><td class="green"></td><td class="green"></td><td class="green"></td><td class="green"></td><td class="red"></td></tr><tr><td class="blue"></td><td class="blue"></td><td class="blue"></td><td class="green"></td><td class="green"></td><td class="green"></td><td class="green"></td><td class="yellow"></td></tr><tr><td class="blue"></td><td class="blue"></td><td class="blue"></td><td class="red"></td><td class="red"></td><td class="yellow"></td><td class="blue"></td><td class="blue"></td></tr><tr><td class="blue"></td><td class="blue"></td><td class="blue"></td><td class="red"></td><td class="red"></td><td class="green"></td><td class="blue"></td><td class="blue"></td></tr></table>
+
+</td><td>
+
+<table class="neliointi">
+<tr><td class="blue"></td><td class="blue"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="green"></td></tr><tr><td class="blue"></td><td class="blue"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="yellow"></td></tr><tr><td class="green"></td><td class="green"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="green"></td></tr><tr><td class="green"></td><td class="green"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="yellow"></td></tr><tr><td class="blue"></td><td class="blue"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="red"></td><td class="green"></td></tr><tr><td class="blue"></td><td class="blue"></td><td class="green"></td><td class="yellow"></td><td class="yellow"></td><td class="yellow"></td><td class="blue"></td><td class="blue"></td></tr><tr><td class="yellow"></td><td class="yellow"></td><td class="red"></td><td class="yellow"></td><td class="yellow"></td><td class="yellow"></td><td class="blue"></td><td class="blue"></td></tr><tr><td class="yellow"></td><td class="yellow"></td><td class="green"></td><td class="yellow"></td><td class="yellow"></td><td class="yellow"></td><td class="red"></td><td class="green"></td></tr></table>
+
+</td></tr>
+</table>
+
+<p>Vasemmassa neliöinnissä neliöiden määrä on 18,
+kun taas oikeassa neliöinnissä neliöiden määrä on 17.</p>
+
+<p>Tehtävänäsi on etsiä neliöinnit tapauksiin,
+joissa alkuperäisen neliön koko on välillä 2&ndash;100.
+Mitä vähemmän neliöitä tarvitset, 
+sitä paremmaksi vastaukseksi katsotaan.
+</p>
+
+<h3>Palautus</h3>
+
+<p>Tehtävässä palautetaan tekstimuotoinen kuvaus jokaisesta neliöinnistä.
+Tehtävässä ei tarvitse palauttaa siis ohjelman koodia.</p>
+
+<p>Kuvauksen ensimmäisellä rivillä on alkuperäisen neliön koko.
+Kuvauksen toisella rivillä on tarvittava pienempien neliöiden määrä.
+Tämän jälkeen jokaisella rivillä on yhden neliön x-koordinaatti,
+y-koordinaatti ja koko. Koordinaatiston vasemman yläkulman
+koordinaatit ovat (1, 1).</p>
+
+<p>Esimerkiksi seuraava kuvaus vastaa esimerkin vasenta neliöintiä:</p>
+
+<pre>
+8
+18
+1 1 3
+4 1 2
+6 1 1
+7 1 2
+6 2 1
+4 3 4
+8 3 1
+1 4 1
+2 4 2
+8 4 1
+1 5 1
+8 5 1
+1 6 3
+8 6 1
+4 7 2
+6 7 1
+7 7 2
+6 8 1
+</pre>

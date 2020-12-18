@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<style type="text/css">
+	table {
+		border-collapse: collapse;
+		border: 2px solid black;
+		border-color: #888 #444 #444 #888;
+	}
+	td {
+		border: 1px solid #888;
+		text-align: right;
+		width: 1.3em;
+		height: 1.3em;
+		padding: 0.2em;
+	}
+</style>
+<title>Datatähti 2001: Alkukilpailu</title>
+<h1>Datatähti 2011: Alkukilpailu</h1>
+
+<h2>Tehtävä 1: DNA-sekvenssien samuus</h2>
+
+<p>Vuoden 2001 alkukilpailun ensimmäisessä ohjelmointitehtävässä pitää tehdä ohjelma, jonka avulla voidaan verrata kahta DNA-sekvenssiä ja laskea niiden "samanlaisuus". DNA-sekvenssejä ajatellaan tässä tehtävässä merkkijonoiksi, jotka koostuvat kirjaimista A (adeniini), C (sytosiini), T (tymiini) ja G (guaniini).</p>
+
+<p>DNA-sekvenssien "samuudella" halutaan ilmaista niiden operaatioiden vähyyttä (ja harvinaisuutta), joita evoluutio on kohdistanut DNA-sekvensseihin.</p>
+
+<h3>1. Yleiskuvaus</h3>
+<p>Tässä ongelmassa ajatellaan, että DNA-sekvensseihin voi kohdistua neljänlaisia operaatioita:</p>
+
+<ul>
+	<li><i>yhden merkin lisäys</i>: esimerkiksi CAT voisi muuttua CA<b>A</b>T :ksi.</li>
+	<li><i>yhden merkin poisto</i>: esimerkiksi <b>C</b>AT voisi muuttua AT :ksi.</li>
+	<li><i>yhden merkin muuttuminen toiseksi</i>: esimerkiksi C<b>A</b>T voisi muuttua C<b>C</b>T :ksi.</li>
+	<li><i>jonkin osan muuttuminen peilikuvakseen</i>: esimerkiksi CA<b>ACT</b>T voisi muuttua CA<b>TCA</b>T :ksi.</li>
+</ul>Luonnollisesti jotkin sekvenssien osat ovat voineet säilyä muuttumattomina.
+
+<p><i>Edelliset operaatiot vaikuttavat johonkin sekvenssin tai sekvenssien osaan. Mihin tahansa sekvenssin kirjaimeen voi kohdistua vain yksi operaatio. Erityisesti, peilikuvan mihinkään merkkiin ei voi kohdistua muita operaatioita.</i></p>
+
+<p>Kullakin edellisistä operaatioista on kustannus: yhden merkin <i>lisäyksellä, poistolla</i> ja <i>muuttumisella toiseksi</i> sekä <i>mielivaltaisen pituisella peilauksella</i> on kustannus 1 (yksi).</p>
+
+<p>Tehtävässä on on annettuna kaksi DNA-sekvenssiä <b>R[1...r]</b> ja <b>S[1...s]</b> ja sinun tulee laskea sekvenssien samuusarvo, joka on <b>minimaalinen kustannus edellä kuvattuja operaatioita kohdistettuna R</b>:ään niin, että <b>R</b> muuttuu sekvenssiksi <b>S</b>. (Minimaalinen kustannus <b>R</b>:n muuttamiseksi <b>S</b>:ksi on aina sama kuin minimaalinen kustannus <b>S</b>:n muuttamiseksi <b>R</b>:ksi.)</p>
+
+<p>Esimerkiksi sekvenssien CATTGTGCAT ja TTACGATGCCT samuusarvo on 3, joka saadaan soveltamalla seuraavia operaatioita:</p>
+<ul>
+	<li>peilaus: <b>CATT</b>GTGCAT -&gt; <b>TTAC</b>GTGCAT (kustannus 1)</li>
+	<li>lisäys: TTACGTGCAT -&gt; TTACG<b>A</b>TGCAT (kustannus 1); ja</li>
+	<li>korvaus: TTACGATGC<b>A</b>T -&gt; TTACGATGC<b>C</b>T (kustannus 1).</li>
+</ul>
+
+<h3>2. Rajoitukset</h3>
+
+<ul>
+	<li>Sekvenssin <b>R</b> pituus <i>r</i> on 1 &lt;= r &lt;= 200.</li>
+	<li>Sekvenssin <b>S</b> pituus <i>s</i> on 1 &lt;= s &lt;= 200.</li>
+	<li>Vain merkit A, C, G ja T esiintyvät sekvensseissä.</li>
+	<li>Pelikuva voi olla enintään k merkkiä pitkä, missä 2 &lt;= k &lt;= 100.</li>
+</ul>
+
+<h3>3. Syötteet</h3>
+<p>Ohjelmasi tulee lukea syötteensä oletushakemiston tekstitiedostosta <code>DNACMP.IN</code>. Tiedoston sisältö on seuraava:</p>
+
+<ul>
+	<li>Ensimmäisellä rivillä on yhdellä välilyönnillä erotetut kolme lukua <i>r</i>, <i>s</i> ja <i>k</i>.</li>
+	<li>Toisella rivillä on sekvenssi <b>R</b>, jossa on tasan r merkkiä.</li>
+	<li>Kolmannella rivillä on sekvenssi <b>S</b>, jossa on tasan s merkkiä.</li>
+</ul>
+
+<h3>4. Tulosteet</h3>
+<p>Ohjelmasi tulosteena tulee olla oletushakemistossa tekstitiedosto <code>DNACMP.OUT</code>. Tiedoston loppua pitää edeltää rivinvaihto, mutta muuten tiedostossa ei saa olla muita rivinvaihtoja ja välilyöntejä kuin mitä alla on sanottu.</p>
+
+<ul>
+	<li>Ensimmäinen rivi sisältää minimaalisen kustannuksen.</li>
+	<li>Kukin seuraava rivi ilmaiseen, mitä operaatiota <b>R</b>:ään on sovellettu, jotta siitä saataisiin <b>S</b>. Mahdolliset operaatiot ja niiden koodaus:
+		<ul>
+	  <li><i>Ei mitään operaatiota</i> tulostiedostoon - (viiva) jonka jälkeen yksi välilyönti, sellaisenaan esiintyvän merkin positio R:ssä, välilyönti ja lopuksi sellaisenaan siirtyvä R:n merkki.</li>
+	  <li><i>Merkin lisäys</i>; tulostiedostoon I, välilyönti ja lisätty merkki.</li>
+	  <li><i>Merkin poisto</i>; D, välilyönti, poistetun merkin positio (R:ssä), välilyönti ja lopuksi poistettu merkki.</li>
+	  <li><i>Merkin korvaus</i>; R, välilyönti, positio (R:ssä), välilyönti, korvattava merkki, välilyönti, -&gt; (viiva ja suurempi kuin -merkki), välilyönti ja lopuksi korvaava merkki.</li>
+	  <li><i>x-pituinen peilaus</i>; M, välilyönti, alkukohta (R:ssä), välilyönti, pituus (x), välilyönti, alkuperäinen merkkijono (R:ssä), välilyönti, -&gt;, välilyönti ja lopuksi korvaava peilikuva.</li>
+		</ul>
+	</li>
+</ul><b>Huomaa, että optimaalista samuusarvoa kohti voi olla useita erilaisia operaatiojonoja. Sinun riittää löytää niistä mikä tahansa.</b>
+
+<h3>5. Esimerkki syötteestä ja oikeasta tuloksesta</h3>
+<p>Jos tiedostossa <code>DNACMP.IN</code> on</p>
+<pre>
+10 11 5
+CATTGTGCAT
+TTACGATGCCT
+</pre>
+<p>jolloin tulos on <code>DNACMP.OUT</code>:</p>
+<pre>
+3
+M 1 4 CATT -&gt; TTAC
+- 5 G
+I A
+- 6 T
+- 7 G
+- 8 C
+R 9 A -&gt; C
+- 10 T
+</pre>
+
+<p>Toinen esimerkki, <code>DNACMP.IN</code>:</p>
+<pre>
+5 4 3
+CAAGT
+AACT
+</pre>
+<p>jolloin tulos on <code>DNACMP.OUT</code>:</p>
+<pre>
+2
+M 1 3 CAA -&gt; AAC
+D 4 G
+- 5 T
+</pre>
+
+<h3>Ratkaisun palautus ja arvostelu</h3>
+<p>Tehtävän ratkaisuna sinun pitää palauttaa asianmukaisesti kommentoitu <b>lähdekielinen</b> ohjelma. Sallittuja ohjelmointikieliä ovat Pascal, C ja C++. Laita ohjelmasi alkuun kommentiksi yhteystietosi ja mahdolliset ohjeet ohjelman kääntämistä varten. Ohjelmalla pitää olla vain edellä määritellyt syötteet ja tulosteet. Erityisesti sen ei pidä lukea mitään näppäimistöltä tai tulostaa mitään näyttöruudulle.</p>
+
+<p>Arvosteluvaiheessa ohjelmasi käännetään (Unix-ympäristössä) ja suoritetaan useilla erilaisilla testisyötteillä. Pisteitä saa käännetyn ohjelman oikeasta ja nopeasta toiminnasta joukolla testisyötteitä. Lähdekielistä ohjelmaa ei siis arvostella, kunhan vain sen käännös onnistuu. Siirrettävyysongelmien välttämiseksi pitäydy kielen peruspiirteissä.</p>
+
+<p>Testausympäristössä on kääntäjinä käytettävissä ainakin GNU C/C++ ja Pascal sekä Free Pascal (jonka pitäisi olla Turbo Pascal -yhteensopiva). Käännökset tehdään kääntäjien oletusarvoisilla optioilla. Jos käytät ohjelmien tekemiseen Turbo Pascal:a tai C++:aa, kerro se palauttaessasi ohjelmaa. Jos käytettävissä olevista kielen piirteistä tms. on epäselvyyttä, kysy asiasta <a href="mailto:Ville.Leppanen@cs.utu.fi">sähköpostitse</a>. Seuraa myös sivua <a href="http://www2.cs.utu.fi/datatahti/DTalku-01/tiedoituksia.htm">http://www2.cs.utu.fi/datatahti/DTalku-01/tiedoituksia.htm</a>, jolle tarpeen mukaan tulee tiedoituksia koskien tehtäviä.</p>
+
+<p>Testisyötteistä osa testaa vain ohjelman oikeellisuutta. Kustakin tällaisesta syötteestä saa tietyn määrän pisteitä, jos ohjelma tuottaa oikean tulosteen kohtuullisessa ajassa. Syötteiden koot ja aikarajat valitaan siten, että hitaallakin ohjelmalla saa pisteitä, kunhan se on muuten toimiva. Osa testisyötteistä testaa ohjelman tehokkuutta. Näillä syötteillä ohjelman saama pistemäärä vähenee sitä mukaa, kun suoritusaika kasvaa. Testisyötteet ovat aina tarkalleen ylläolevan kuvauksen mukaisia. Pisteytyksen yksityiskohtia ja tarkkoja aikarajoja ei tässä vaiheessa julkisteta. Vertailukohdaksi voidaan kuitenkin antaa, että tehtävän laatijan ratkaisu vaatii alle 500 kilotavua muistia ja vie suurimmilla testisyötteillä alle yhden sekunnin suoritusaikaa (GNU C, Linux, 667 MHz Pentium III).</p>
+
+<p>Palauta ratkaisusi mieluiten sähköpostiviestinä osoitteeseen <a href="mailto:Ville.Leppanen@cs.utu.fi">Ville.Leppanen@cs.utu.fi</a>. Älä käytä yli 80 merkin rivejä! Voit myös toimittaa ratkaisusi 3,5 tuuman DOS-formatoidulla levykkeellä osoitteeseen</p>
+
+<div style="margin-left: 6em; white-space: pre-line;">
+	Ville Leppänen
+	Turun yliopisto
+	Tietojenkäsittelyoppi
+	Lemminkäisenkatu 14A, Datacity
+	20520 Turku
+</div>
+
+<p>Pakkaa levyke huolellisesti ja laita mielellään toinen samansisältöinen mukaan varmuuskopioksi. Talleta ohjelmasi juurihakemistoon nimellä dt2001a.pas, dt2001a.c tai dt2001a.cpp.</p>
+
+<h2>Tehtävä 2: Taikaneliön muodostaminen</h2>
+<p>Alkukilpailun toisessa ohjelmointitehtävässä pitää tehdä ohjelma, jonka avulla muodostetaan ns. <i>taikaneliö</i>.</p>
+
+<h3>1. Yleiskuvaus</h3>
+<p>Tässä tehtävässä <i>taikaneliöllä</i> tarkoitetaan <i>n</i>x<i>n</i> -muotoista numeroista koostuvaa neliötä, johon on sijoiteltu numerot 1, 2, ..., <i>n*n</i> (kukin numero esiintyy tasan kerran) ja jolle on voimassa seuraava: kunkin vaakarivin alkioiden summa on sama ja lisäksi kunkin pystyrivin alkioiden summa on sama. (Yleisesti, mutta ei tässä tehtävässä, taikaneliöissä vaaditaan vielä päädiagonaaleistakin samaa.)</p>
+
+<p>Taikaneliö on tiettävästi olemassa kaikille neliön sivun koon arvoille <i>n</i> paitsi arvolle <i>n=2</i>. Triviaalisti 1 muodostaa tällaisen taikaneliön. Tapauksessa <i>n=3</i> eräs taikaneliö on seuraava:</p>
+
+<table>
+	<tr>
+		<td>4</td>
+		<td>3</td>
+		<td>8</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>5</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>7</td>
+		<td>6</td>
+	</tr>
+</table>
+
+<p>jonka kunkin vaaka- ja pystyrivin alkioiden summa on 15 (tässä tapauksessa myös kummallakin diagonaalilla olevien alkioiden summa on 15). Tapauksessa <i>n=4</i> eräs taikaneliö on seuraava:</p>
+
+<table>
+	<tr>
+		<td>4</td>
+		<td>14</td>
+		<td>15</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>11</td>
+		<td>10</td>
+		<td>8</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>7</td>
+		<td>6</td>
+		<td>9</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>2</td>
+		<td>3</td>
+		<td>16</td>
+	</tr>
+</table>
+
+<p>Nyt vaaka- ja pystyriveillä olevien alkioiden summa on 34 (mutta diagonaaleilla olevien alkioiden summa ei enää ole 34; on mahdollista tehdä sellainen <i>4x4</i>-taikaneliö, jolle diagonaalialkioiden summa on myös 34).</p>
+
+<p><b>Tässä tehtävässä sinun pitää tehdä ohjelma, joka muodostaa <i>n</i>x<i>n</i>-taikaneliön annetun sivun koon <i>n</i> ja joidenkin ruutuihin valmiiksi "sijoitettujen" arvojen perusteella.</b></p>
+
+<p>Valmiiksi sijoitettuja arvoja ei saa muuttaa. Tehtävällä on aina vähintään yksi ratkaisu. Sinun ohjelmasi tulee löytää mikä tahansa ratkaisuista.</p>
+
+<p>Esimerkiksi, jos annettuna olisi <i>n=5</i> ja alla olevat numerot</p>
+
+<table>
+	<tr>
+		<td>??</td>
+		<td>6</td>
+		<td>??</td>
+		<td>5</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>??</td>
+		<td>15</td>
+		<td>16</td>
+		<td>??</td>
+	</tr>
+	<tr>
+		<td>??</td>
+		<td>20</td>
+		<td>??</td>
+		<td>??</td>
+		<td>21</td>
+	</tr>
+	<tr>
+		<td>??</td>
+		<td>4</td>
+		<td>17</td>
+		<td>23</td>
+		<td>10</td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>??</td>
+		<td>1</td>
+		<td>??</td>
+		<td>19</td>
+	</tr>
+</table>
+
+<p>voisi tuloksena olla seuraava taikaneliö:</p>
+
+<table>
+	<tr>
+		<td>18</td>
+		<td>6</td>
+		<td>24</td>
+		<td>5</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>22</td>
+		<td>15</td>
+		<td>16</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>20</td>
+		<td>8</td>
+		<td>14</td>
+		<td>21</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>4</td>
+		<td>17</td>
+		<td>23</td>
+		<td>10</td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>13</td>
+		<td>1</td>
+		<td>7</td>
+		<td>19</td>
+	</tr>
+</table>
+
+<h3>2. Rajoitukset</h3>
+
+<ul>
+	<li>Neliön sivun koko <i>n</i> on 1 &lt;= <i>n</i> &lt;= 20.</li>
+	<li>Valmiiksi sijoitettujen lukujen määrä <i>k</i> on 0 &lt;= <i>k</i> &lt;= <i>n*n</i>.</li>
+</ul>
+
+<h3>3. Syötteet</h3>
+<p>Ohjelmasi tulee lukea syötteensä oletushakemiston tekstitiedostosta <code>SQUARE.IN</code>. Tiedoston sisältö on seuraava:</p>
+
+<ul>
+	<li>Ensimmäisellä rivillä on yhdellä välilyönnillä erotetut kaksi kokonaislukua <i>n</i> ja <i>k</i>.</li>
+	<li>Seuraavilla <i>k</i>:lla rivillä on kullakin kolme välilyönnillä toisistaan erotettua kokonaislukua <i>yi</i>, <i>xi</i> ja <i>vi</i> (tässä järjestyksessä). Nämä luvut kuvaavat valmiiksi sijoitellut alkiot. Luku <i>vi</i> on taikaneliön sarakkeen <i>xi</i> ja rivin <i>yi</i> risteyskohdassa.</li>
+</ul>
+
+<p><b>Neliön indeksointi on [1...n][1...n], eli 1 &lt;= xi, yi &lt;= n.</b></p>
+
+<h3>4. Tulosteet</h3>
+<p>Ohjelmasi tulosteena tulee olla oletushakemistossa tekstitiedosto <code>SQUARE.OUT</code>. Tiedoston loppua pitää edeltää rivinvaihto, mutta muuten tiedostossa ei saa olla muita rivinvaihtoja ja välilyöntejä kuin mitä alla on sanottu.</p>
+
+<p>Tiedosto koostuu <i>n</i>:stä rivistä. Kullakin rivillä on tulostettuna <i>n</i> taikaneliön lukua. Ensimmäisellä rivillä on taikaneliön ensimmäisen rivin luvut, toisella toisen rivin luvut, jne. Kunkin rivin alkiot tulostetaan järjestyksessä kolmen merkin mittaiseen kenttään niin, että luku tulostuu kentän oikeaan laitaan ja sitä edeltää tarpeellinen määrä välilyöntejä.</p>
+
+<h3>5. Esimerkki syötteestä ja oikeasta tuloksesta</h3>
+<p>Jos tiedostossa <code>SQUARE.IN</code> on</p>
+<pre>
+4 8
+1 2 14
+1 3 15
+2 3 10
+3 2 7
+3 4 9
+4 4 16
+4 2 2
+2 2 11
+</pre>
+<p>kelpaa tulokseksi <code>SQUARE.OUT</code>:</p>
+<pre>
+  4 14 15  1
+  5 11 10  8
+ 12  7  6  9
+ 13  2  3 16
+</pre>
+
+<h3>Ratkaisun palautus ja arvostelu</h3>
+<p>Tehtävän ratkaisuna sinun pitää palauttaa asianmukaisesti kommentoitu <b>lähdekielinen</b> ohjelma. Sallittuja ohjelmointikieliä ovat Pascal, C ja C++. Laita ohjelmasi alkuun kommentiksi yhteystietosi ja mahdolliset ohjeet ohjelman kääntämistä varten. Ohjelmalla pitää olla vain edellä määritellyt syötteet ja tulosteet. Erityisesti sen ei pidä lukea mitään näppäimistöltä tai tulostaa mitään näyttöruudulle.</p>
+
+<p>Arvosteluvaiheessa ohjelmasi käännetään (Unix-ympäristössä) ja suoritetaan useilla erilaisilla testisyötteillä. Pisteitä saa käännetyn ohjelman oikeasta ja nopeasta toiminnasta joukolla testisyötteitä. Lähdekielistä ohjelmaa ei siis arvostella, kunhan vain sen käännös onnistuu. Siirrettävyysongelmien välttämiseksi pitäydy kielen peruspiirteissä.</p>
+
+<p>Testausympäristössä on kääntäjinä käytettävissä ainakin GNU C/C++ ja Pascal sekä Free Pascal (jonka pitäisi olla Turbo Pascal -yhteensopiva). Käännökset tehdään kääntäjien oletusarvoisilla optioilla. Jos käytät ohjelmien tekemiseen Turbo Pascal:a tai C++:aa, kerro se palauttaessasi ohjelmaa. Jos käytettävissä olevista kielen piirteistä tms. on epäselvyyttä, kysy asiasta <a href="mailto:Ville.Leppanen@cs.utu.fi">sähköpostitse</a>. Seuraa myös sivua <a href="http://www2.cs.utu.fi/datatahti/DTalku-01/tiedoituksia.htm">http://www2.cs.utu.fi/datatahti/DTalku-01/tiedoituksia.htm</a>, jolle tarpeen mukaan tulee tiedoituksia koskien tehtäviä.</p>
+
+<p>Testisyötteistä osa testaa vain ohjelman oikeellisuutta. Kustakin tällaisesta syötteestä saa tietyn määrän pisteitä, jos ohjelma tuottaa oikean tulosteen kohtuullisessa ajassa. Syötteiden koot ja aikarajat valitaan siten, että hitaallakin ohjelmalla saa pisteitä, kunhan se on muuten toimiva. Osa testisyötteistä testaa ohjelman tehokkuutta. Näillä syötteillä ohjelman saama pistemäärä vähenee sitä mukaa, kun suoritusaika kasvaa. Testisyötteet ovat aina tarkalleen ylläolevan kuvauksen mukaisia. Pisteytyksen yksityiskohtia ja tarkkoja aikarajoja ei tässä vaiheessa julkisteta. Ohjelmallesi tullaan antamaan aikaa joissakin tapauksissa vähintään 20 sekuntia (Linux, 667 MHz Pentium III).</p>
+
+<p>Palauta ratkaisusi mieluiten sähköpostiviestinä osoitteeseen <a href="mailto:Ville.Leppanen@cs.utu.fi">Ville.Leppanen@cs.utu.fi</a>. Älä käytä yli 80 merkin rivejä! Voit myös toimittaa ratkaisusi 3,5 tuuman DOS-formatoidulla levykkeellä osoitteeseen</p>
+
+<div style="margin-left: 6em; white-space: pre-line;">
+	Ville Leppänen
+	Turun yliopisto
+	Tietojenkäsittelyoppi
+	Lemminkäisenkatu 14A, Datacity
+	20520 Turku
+</div>
+
+<p>Pakkaa levyke huolellisesti ja laita mielellään toinen samansisältöinen mukaan varmuuskopioksi. Talleta ohjelmasi juurihakemistoon nimellä dt2001b.pas, dt2001b.c tai dt2001b.cpp.</p>
